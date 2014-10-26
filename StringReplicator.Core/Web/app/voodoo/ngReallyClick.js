@@ -1,4 +1,4 @@
-(function () {
+(function() {
     //http://stackoverflow.com/questions/22113456/modal-confirmation-as-an-angular-ui-directive
     angular.module('ngReallyClickModule', ['ui.bootstrap'])
         .directive('ngReallyClick', ['$modal',

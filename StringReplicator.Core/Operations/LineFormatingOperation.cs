@@ -113,9 +113,7 @@ namespace StringReplicator.Core.Operations
             convertedObject = null;
             var unWantedCodes = new[] {TypeCode.Empty, TypeCode.Object, TypeCode.String};
             var codes =
-                Enum.GetValues(typeof (TypeCode))
-                .ToArray<TypeCode>()
-                .Where(c => !unWantedCodes.Contains(c)).ToArray();
+                Enum.GetValues(typeof (TypeCode)).ToArray<TypeCode>().Where(c => !unWantedCodes.Contains(c)).ToArray();
 
             var provider = CultureInfo.CurrentCulture;
             foreach (var code in codes)

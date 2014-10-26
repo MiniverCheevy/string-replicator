@@ -23,17 +23,15 @@ namespace StringReplicator.Core.CodeGeneration
             var resources =
                 interestingTypes.ToLookup(
                     c => c.GetCustomAttributes(typeof (RestAttribute), false).First().To<RestAttribute>().Resource,
-                    c =>
-                    buildVerb(
-                        c.GetCustomAttributes(typeof (RestAttribute), false).First(), c));
+                    c => buildVerb(c.GetCustomAttributes(typeof (RestAttribute), false).First(), c));
             foreach (var key in resources.Select(c => c.Key).ToArray())
             {
-                var resource = new Resource()
-                    {
-                        Name = key,
-                        Namespace = Namespace,
-                        ClassName = string.Format("{0}Controller", key)
-                    };
+                var resource = new Resource
+                {
+                    Name = key,
+                    Namespace = Namespace,
+                    ClassName = string.Format("{0}Controller", key)
+                };
                 resource.Verbs.AddRange(resources[key]);
                 Resources.Add(resource);
             }
@@ -45,13 +43,13 @@ namespace StringReplicator.Core.CodeGeneration
         {
             get
             {
-                return new Dictionary<Verb, RestMethod>()
-                    {
-                        {Verb.Get, new RestMethod() {Attribute = "[HttpGet]", Name = "Get", Parameter = "[FromUri]"}},
-                        {Verb.Post, new RestMethod() {Attribute = "[HttpPost]", Name = "Post", Parameter = "[FromUri]"}},
-                        {Verb.Put, new RestMethod() {Attribute = "[HttpPut]", Name = "Put", Parameter = "[FromUri]"}},
-                        {Verb.Delete,new RestMethod() {Attribute = "[HttpDelete]", Name = "Delete", Parameter = "[FromUri]"}},
-                    };
+                return new Dictionary<Verb, RestMethod>
+                {
+                    {Verb.Get, new RestMethod {Attribute = "[HttpGet]", Name = "Get", Parameter = "[FromUri]"}},
+                    {Verb.Post, new RestMethod {Attribute = "[HttpPost]", Name = "Post", Parameter = "[FromUri]"}},
+                    {Verb.Put, new RestMethod {Attribute = "[HttpPut]", Name = "Put", Parameter = "[FromUri]"}},
+                    {Verb.Delete, new RestMethod {Attribute = "[HttpDelete]", Name = "Delete", Parameter = "[FromUri]"}},
+                };
             }
         }
 

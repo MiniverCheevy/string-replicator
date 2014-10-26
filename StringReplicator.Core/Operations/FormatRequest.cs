@@ -9,6 +9,7 @@ namespace StringReplicator.Core.Operations
     {
         [Required(ErrorMessage = "required")]
         public string DataString { get; set; }
+
         [Required(ErrorMessage = "required")]
         public string FormatString { get; set; }
     }

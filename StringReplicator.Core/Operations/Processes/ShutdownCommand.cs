@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using StringReplicator.Core.CodeGeneration;
 using Voodoo.Messages;
 using Voodoo.Operations;
@@ -10,7 +8,7 @@ using Voodoo.Operations;
 namespace StringReplicator.Core.Operations.Processes
 {
     [Rest(Verb.Delete, Resources.Session)]
-    public class ShutdownCommand:Command<EmptyRequest,Response>
+    public class ShutdownCommand : Command<EmptyRequest, Response>
     {
         public ShutdownCommand(EmptyRequest request) : base(request)
         {

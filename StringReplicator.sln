@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringReplicator.Core", "St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringReplicator.Tests", "StringReplicator.Tests\StringReplicator.Tests.csproj", "{78D6554B-410D-44D7-AC41-0D28C4D46314}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voodoo", "..\voodoo\Voodoo\Voodoo.csproj", "{878AED33-344D-44CE-B11D-F9EA7A47113A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{78D6554B-410D-44D7-AC41-0D28C4D46314}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78D6554B-410D-44D7-AC41-0D28C4D46314}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78D6554B-410D-44D7-AC41-0D28C4D46314}.Release|Any CPU.Build.0 = Release|Any CPU
-		{878AED33-344D-44CE-B11D-F9EA7A47113A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{878AED33-344D-44CE-B11D-F9EA7A47113A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{878AED33-344D-44CE-B11D-F9EA7A47113A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{878AED33-344D-44CE-B11D-F9EA7A47113A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

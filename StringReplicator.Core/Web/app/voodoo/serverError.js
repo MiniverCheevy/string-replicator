@@ -1,4 +1,4 @@
-﻿(function () {
+﻿(function() {
     angular.module('serverError', [])
         .directive("serverError", [function() {
             //http://icanmakethiswork.blogspot.com/2014/08/angularjs-meet-aspnet-server-validation.html
@@ -12,15 +12,15 @@
                     name: "@",
                     serverError: "="
                 },
-               
+
                 link: function(scope, element, attrs, ngModelController) {
 
                     // Bootstrap alert template for error
                     //var template = '<div class="alert alert-danger" role="alert">' +
                     //    '<i class="glyphicon glyphicon-warning-sign"></i> ' +
                     //    '%error%</div>';
-                //    var template = '<span class="label label-danger"><i class="glyphicon glyphicon-warning-sign"></i>&nbsp;' +
-                //'%error%</span>';
+                    //    var template = '<span class="label label-danger"><i class="glyphicon glyphicon-warning-sign"></i>&nbsp;' +
+                    //'%error%</span>';
                     var template = '<span class="text-danger"><i class="glyphicon glyphicon-warning-sign"></i>&nbsp;' +
                         '%error%</span>';
 
@@ -52,7 +52,7 @@
 
                     // wipe the server error message upon keyup or change events so can revalidate with server
                     element.on("keyup change", function(event) {
-                        scope.$apply(function () {
+                        scope.$apply(function() {
                             ngModelController.$setValidity("server", true);
                         });
                     });
@@ -61,4 +61,3 @@
 
         }]);
 }())
-       

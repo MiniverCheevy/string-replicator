@@ -1,15 +1,11 @@
-﻿.ng-cloak {
-    display: none !important;
-}
-.sortArrow {
-font-size: 50%;
-}
+﻿.ng-cloak { display: none !important; }
 
-.grid th {
-    padding: 0px 0px 0px 0px !important;
-}
+.sortArrow { font-size: 50%; }
+
+.grid th { padding: 0px 0px 0px 0px !important; }
+
 .sorter {
-    white-space: nowrap; 
-     width:100%; 
+    white-space: nowrap;
+    width: 100%;
     margin: 0px 0px 0px 0px !important;
 }

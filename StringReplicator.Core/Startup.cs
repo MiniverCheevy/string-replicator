@@ -16,13 +16,13 @@ namespace StringReplicator.Core
 {
     public static class Program
     {
-        static string url = "http://localhost:{0}";
+        private static string url = "http://localhost:{0}";
 
         public static void Main(string[] args)
         {
             try
             {
-                var options = new Microsoft.Owin.Hosting.StartOptions();
+                var options = new StartOptions();
                 var port = ConfigurationManager.AppSettings["port"] ?? "9998";
                 url = string.Format(url, port);
                 options.Urls.Add(url);
@@ -42,9 +42,8 @@ namespace StringReplicator.Core
                 if (ex.InnerException != null && ex.InnerException is HttpListenerException)
                 {
                     Console.WriteLine(
-                        String.Format(
-                            "Failed to start web server.  You may wish to change the port in the configuration file: {0}",
-                            ex.InnerException.Message));
+                        "Failed to start web server.  You may wish to change the port in the configuration file: {0}",
+                        ex.InnerException.Message);
                     Console.ReadLine();
                 }
                 else
@@ -59,20 +58,14 @@ namespace StringReplicator.Core
     {
         public void Configuration(IAppBuilder app)
         {
-
-
-            app.UseFileServer(new FileServerOptions()
+            app.UseFileServer(new FileServerOptions
             {
                 FileSystem = new PhysicalFileSystem("Web"),
                 EnableDefaultFiles = true,
                 EnableDirectoryBrowsing = true
             });
             var apiConfig = new HttpConfiguration();
-            apiConfig.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            apiConfig.Routes.MapHttpRoute("DefaultApi", "api/{controller}/{id}", new {id = RouteParameter.Optional});
             var jsonSettings = apiConfig.Formatters.JsonFormatter.SerializerSettings;
             jsonSettings.Formatting = Formatting.Indented;
             jsonSettings.NullValueHandling = NullValueHandling.Ignore;
@@ -81,9 +74,5 @@ namespace StringReplicator.Core
 
             app.UseWebApi(apiConfig);
         }
-
     }
 }
-
-
-

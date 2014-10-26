@@ -18,8 +18,7 @@ namespace StringReplicator.Core.Operations
         private List<string[]> csvData;
         private StringBuilder output = new StringBuilder();
 
-        public FormatQuery(FormatRequest request)
-            : base(request)
+        public FormatQuery(FormatRequest request) : base(request)
         {
         }
 

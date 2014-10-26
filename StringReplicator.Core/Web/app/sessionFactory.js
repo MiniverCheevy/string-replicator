@@ -5,28 +5,27 @@
 //subject to change without notice, might regenerate while you're reading, etc
 //***************************************************************
 
-(function () {
+(function() {
     angular
-	.module('app')
-	.factory('sessionFactory', ['$http', function($http) {
+        .module('app')
+        .factory('sessionFactory', ['$http', function($http) {
 
-    var urlBase = '/api/session';
-    var sessionFactory = {};
+            var urlBase = '/api/session';
+            var sessionFactory = {};
 
+
+            sessionFactory.delete = function(request) {
+                var operation = $http({ method: 'DELETE', url: urlBase, params: request });
+                return operation.then(function(data, status, headers, config) {
+                    return data.data;
+                }, function(error) {
+                    console.log(error);
+                    return { isOk: false, message: error };
+                });
+
+            };
 		
-		sessionFactory.delete = function (request) {
-        var operation= $http({method: 'DELETE', url: urlBase, params: request });
-		return operation.then(function(data, status, headers, config) {
-            return data.data;
-        }, function(error) {
-		    console.log(error);
-            return  { isOk: false, message: error };
-        });
-		
-    };
 
-		
-
-	return sessionFactory;
-}]);
+            return sessionFactory;
+        }]);
 }())

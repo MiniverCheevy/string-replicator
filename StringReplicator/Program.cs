@@ -8,7 +8,7 @@ namespace StringReplicator
     {
         private static void Main(string[] args)
         {
-            StringReplicator.Core.Program.Main(args);
+            Core.Program.Main(args);
         }
     }
 }

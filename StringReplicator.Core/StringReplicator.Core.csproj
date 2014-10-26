@@ -89,8 +89,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Voodoo">
-      <HintPath>..\packages\Voodoo.Patterns.1.0.20\lib\net40\Voodoo.dll</HintPath>
+    <Reference Include="Voodoo, Version=1.0.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Voodoo.Patterns.1.0.21.0\lib\net40\Voodoo.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +157,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Controllers.tt</DependentUpon>
     </Content>
+    <Content Include="license.txt" />
     <Content Include="Web\app\app.css" />
     <Content Include="Web\app\app.js" />
     <Content Include="Web\app\config\controller.js" />
