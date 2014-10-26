@@ -1,0 +1,11 @@
+﻿<#@ assembly name="System.Core" #>
+<#@ include file="$(ProjectDir)\CodeGeneration\MultipleOutputHelper.ttinclude" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ assembly name="$(ProjectDir)..\build-outputs\StringReplicator.Core.dll"#>
+<#@ assembly name="$(ProjectDir)..\build-outputs\Voodoo.dll"#>
+<#
+var manager = Manager.Create(Host, GenerationEnvironment);
+var walker = new StringReplicator.Core.CodeGeneration.CodeWalker();
+#>

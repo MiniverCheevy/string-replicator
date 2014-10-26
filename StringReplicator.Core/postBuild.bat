@@ -1,0 +1,2 @@
+rmdir /S /Q "C:\Dropbox\Lib\Projects\string-replicator\build-outputs\web\"
+mklink /D "C:\Dropbox\Lib\Projects\string-replicator\build-outputs\web\" "C:\Dropbox\Lib\Projects\string-replicator\StringReplicator.Core\web\" 

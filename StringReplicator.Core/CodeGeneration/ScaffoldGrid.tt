@@ -1,0 +1,53 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ output extension=".html" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="$(ProjectDir)\CodeGeneration\CodeWalker.ttinclude" #>
+<#
+var properties = walker.GetProperties("RunAsWrapper.Core.Operations.Users.UserMessage");
+#>
+<div class="form-horizontal">
+    <div class="col-md-11">
+        
+    </div>
+    <div class="col-md-1">    
+        <button type="button" class="btn btn-primary active" ng-click="add()">
+            Add New
+        </button>
+    </div>
+</div>
+<div class="gridShell">
+    <table class="grid table table-bordered table-striped">
+        <thead>
+			<tr>
+<#
+foreach(var property in properties)
+{
+#>
+                <th class="">
+                    <v-sorter
+                        text="<#=property.FriendlyName#>" member="<#=property.CamelCaseName#>" 
+						grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+<#}#>
+		<th class=""></th>
+		</tr>
+		</thead>
+        <tr data-ng-repeat="item in data">
+<#foreach(var property in properties){#>
+            <td>{{item.<#=property.CamelCaseName#>}}</td>
+<#}#>
+
+            <td>
+				<button ng-click="edit(item.key)" 
+				class="btn btn-xs btn-primary">Edit</button>
+			</td>
+	</tr>
+    </table>
+</div>
+<v-pager
+    grid-state="state"
+    onchange="refresh()"></v-pager>

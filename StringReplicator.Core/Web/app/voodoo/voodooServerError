@@ -1,0 +1,76 @@
+(function () {
+
+    //derived from http://icanmakethiswork.blogspot.com/2014/08/angularjs-meet-aspnet-server-validation.html
+    // Usage:
+    // <input class="col-xs-12 col-sm-9" 
+    //        name="sage.name" ng-model="vm.sage.name" server-error="vm.errors" />
+    angular.module('voodoo.ui.serverError', [])
+        .controller("voodooServerErrorController", [function($scope) {
+            this.init = function(element, ngModelController, decorator, template)
+            {
+                self.$decorator = decorator;
+                self.$element = element;
+                self.ngModelController = ngModelController;
+                self.template = template;
+                
+                $scope.$watch(function() {
+                        try {
+                            return ngModelController.$error.server;
+                        } catch(e) {
+                            return null;
+                        }
+                    }, showHideValidation);
+
+                element.on("keyup change", function(event) {
+                        scope.$apply(function () {
+                            ngModelController.$setValidity("server", true);
+                        });
+                    });
+            },
+             this.showHideValidation(serverError) {
+                var errorHtml = "";
+                if (serverError) {
+                    var errorDictionary = scope.serverError;
+                    var errorKey = scope.name;
+                    errorHtml = self.template.replace(/%error%/, errorDictionary[errorKey] || "Unknown error occurred...");
+                }
+                this.decorator.html(errorHtml);
+            }                                   
+        },
+        .directive("serverError", [function() {
+            
+            return {
+                restrict: "A",
+                require: "ngModel",
+                scope: {
+                    name: "@",
+                    serverError: "=",
+                    position:"@"
+                },
+               
+                link: function(scope, element, attrs, ngModelController, voodooServerErrorController) {
+                    var template;
+                    var decorator;
+
+                    if (position == "below")
+                    {
+                        var template = '<div class="alert alert-danger" role="alert">' +
+                            '<i class="glyphicon glyphicon-warning-sign"></i> ' +
+                            '%error%</div>';
+                        var decorator = angular.element('<div></div>');
+                        element.after(decorator);
+                    }
+                    else
+                    {
+                        var template = '<span class="text-danger"><i class="glyphicon glyphicon-warning-sign"></i>&nbsp;' +
+                        '%error%</span>';
+                        var decorator = angular.element(' <div class="col-lg-4"></div>');
+                        element.parent().after(decorator);
+                    }
+                    voodooServerErrorController.init(element, ngModelController, decorator, template);                    
+                }
+            };
+
+        }]);
+}())
+       

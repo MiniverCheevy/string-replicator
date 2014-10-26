@@ -1,0 +1,43 @@
+﻿<div class="form-horizontal">
+    <div class="col-md-11">
+        
+    </div>
+    <div class="col-md-1">    
+        <button type="button" class="btn btn-primary active" ng-click="add()">
+            Add New
+        </button>
+    </div>
+</div>
+<div class="gridShell">
+    <table class="grid table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th class="key-column">
+                    <v-sorter
+                        text="Key" member="key" 
+                        grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+                <th class="path-column">
+                    <v-sorter
+                        text="Path" member="fullPath" 
+                        grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+        <th class="key-column"></th>
+        </tr>
+        </thead>
+        <tr data-ng-repeat="item in data">
+            <td>{{item.key}}</td>
+            <td>{{item.fullPath}}</td>
+
+            <td>
+                <button ng-click="edit(item.key)" 
+                class="btn btn-xs btn-primary">Edit</button>
+            </td>
+    </tr>
+    </table>
+</div>
+<v-pager
+    grid-state="state"
+    onchange="refresh()"></v-pager>

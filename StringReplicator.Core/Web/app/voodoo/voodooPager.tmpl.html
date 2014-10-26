@@ -1,0 +1,37 @@
+<div>
+    <div class="pagination" ng-show="hasRecords">
+        <ul class="pagination">
+            <li ng-class="{'disabled' : isFirstPage }">
+                <a href="" ng-disabled="isFirstPage"
+                    ng-click="firstPage()">&laquo;</a>
+            </li>
+            <li ng-class="{'disabled' : isFirstBlock }">
+                <a href="" ng-disabled="isFirstBlock"
+                    ng-click="prevBlock()">...</a>
+            </li>
+            <li ng-class="{'disabled' : isFirstPage }">
+                <a href="" ng-disabled="isFirstPage"
+                    ng-click="prevPage()">&lt</a>
+            </li>
+            <li ng-repeat="block in pageBlock" ng-class="{'active' : block.isActive  }">
+                <a href="" ng-click="page(block.page)">{{block.page}}</a>
+            </li>
+            <li ng-class="{'disabled' : isLastPage }">
+                <a href="" ng-disabled="isLastPage"
+                    ng-click="nextPage()">&gt</a>
+            </li>
+            <li ng-class="{'disabled' : isLastBlock }">
+                <a href="" ng-disabled="isLastBlock"
+                    ng-click="nextBlock()">...</a>
+            </li>
+            <li ng-class="{'disabled' : isLastPage }">
+                <a href="" ng-disabled="isLastBlock"
+                    ng-click="lastPage()">&raquo</a>
+            </li>
+        </ul>
+        <p>{{RecordsVerbiage}}</p>
+    </div>
+    <div id="norecords" ng-show="!hasRecords">
+        <h3>No records found</h3>
+    </div>
+</div>

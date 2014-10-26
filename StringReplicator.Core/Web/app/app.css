@@ -1,0 +1,32 @@
+﻿body{padding: 10px 20px 10px 20px;}
+.grid {
+    table-layout:fixed;
+}
+.gridShell {
+    height: 430px;
+    margin: 6px 0px 6px 0px;
+    padding: 6px 0px 6px 0px;
+}
+.elipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+.path-column {   
+    width:600px;
+}
+.key-column {
+    width: 100px;
+}
+
+.form-group {
+
+
+}
+.left {
+    float:left;
+}
+.clear {
+    clear:both;
+}

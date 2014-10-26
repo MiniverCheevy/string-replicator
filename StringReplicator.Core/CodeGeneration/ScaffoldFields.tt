@@ -1,0 +1,29 @@
+﻿<#@ template debug="true" hostspecific="true" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ output extension=".html" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ include file="$(ProjectDir)\CodeGeneration\CodeWalker.ttinclude" #>
+<#
+var properties = walker.GetProperties("StringReplicator.Core.Operations.FormatRequest");
+foreach(var property in properties)
+{
+#>
+<div class="form-group">
+    <label for="<#=property.CamelCaseName#>" class="col-lg-2 control-label"><#=property.FriendlyName#></label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="<#=property.CamelCaseName#>" id="<#=property.CamelCaseName#>" 
+			   placeholder="<#=property.FriendlyName#>"
+               ng-model="detail.<#=property.CamelCaseName#>" 
+			   server-error ="detail.errors"  maxlength='<#= property.MaxLength.HasValue ? property.MaxLength.Value : 128 #>' />
+    </div>       
+</div>
+
+<#
+}
+
+
+#>
+

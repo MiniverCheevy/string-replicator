@@ -1,0 +1,7 @@
+C:\Dropbox\Lib\Projects\string-replicator\build-outputs\StringReplicator.Core.dll.config
+C:\Dropbox\Lib\Projects\string-replicator\build-outputs\StringReplicator.Core.dll
+C:\Dropbox\Lib\Projects\string-replicator\build-outputs\StringReplicator.Core.pdb
+C:\Dropbox\Lib\Projects\string-replicator\StringReplicator.Core\obj\Debug\StringReplicator.Core.csproj.App.config
+C:\Dropbox\Lib\Projects\string-replicator\StringReplicator.Core\obj\Debug\StringReplicator.Core.dll
+C:\Dropbox\Lib\Projects\string-replicator\StringReplicator.Core\obj\Debug\StringReplicator.Core.pdb
+C:\Dropbox\Lib\Projects\string-replicator\StringReplicator.Core\obj\Debug\StringReplicator.Core.csprojResolveAssemblyReference.cache

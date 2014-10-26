@@ -1,0 +1,23 @@
+﻿<div class="form-group">
+    <label for="dataString" class="col-lg-2 control-label">Data String</label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="dataString" id="dataString" 
+			   placeholder="Data String"
+               ng-model="detail.dataString" 
+			   server-error ="detail.errors"  maxlength='128' />
+    </div>       
+</div>
+
+<div class="form-group">
+    <label for="formatString" class="col-lg-2 control-label">Format String</label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="formatString" id="formatString" 
+			   placeholder="Format String"
+               ng-model="detail.formatString" 
+			   server-error ="detail.errors"  maxlength='128' />
+    </div>       
+</div>
+
+

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" ng-app="app" ng-strict-di>
+    <head>
+        <title>String Replicator</title>
+        <meta http-equiv="x-ua-compatible" content="IE=Edge" />
+        <link rel="stylesheet" href="css/bootstrap.dark.css" />
+        <link rel="stylesheet" href="app/app.css" />
+        <link rel="stylesheet" href="app/voodoo/voodoo.css" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/icon">
+        <link rel="icon" href="/favicon.ico" type="image/icon">
+    </head>
+    <body ng-controller="string">
+        <h2>String Replicator</h2>
+        <div class="panel panel-default col-md-11">
+            <br />
+            <div class="form-group">
+                <div class="row">
+                    <label for="dataString" class="col-lg-2 control-label">CSV Data</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <textarea class="form-control" rows="8"
+                                  name="dataString" id="dataString"
+                                  placeholder="CSV Data, multiline allowed ex: a,b"
+                                  ng-model="detail.dataString"
+                                  server-error="detail.errors"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <label for="formatString" class="col-lg-2 control-label">Format</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <textarea class="form-control" rows="6"
+                                  name="formatString" id="formatString"
+                                  placeholder="Format String,if you doing c# be sure to double up the { and } characters ex: public {0} {1} &#123;&nbsp;&#123; get; set; &#125;&nbsp;&#125; (no spaces)"
+                                  ng-model="detail.formatString"
+                                  server-error="detail.errors"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7"></div>
+                <div class="col-md-1">
+                    <button class="btn btn-primary" ng-click="format()">Format</button>
+                </div>
+            </div>
+            <br />
+        </div>
+        <div class="row">
+            <label for="output" class="col-lg-2 control-label">Output</label>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <textarea class="form-control" rows="12"
+                          name="output" id="output"                          
+                          ng-model="detail.output"
+                    ></textarea>
+            </div>
+        </div>
+
+
+        <!--<div ng-controller="config"></div>-->
+        <script src="js/angular.min.js"> </script>
+
+        <script src="js/ui-bootstrap-tpls-0.11.0.min.js"> </script>
+        <script src="app/app.js"> </script>
+        <script src="app/string/controller.js"> </script>
+        <!--<script src="app/config/controller.js"> </script>-->
+        <script src="app/voodoo/voodoo.js"> </script>
+        <script src="app/voodoo/voodooPager.js"> </script>
+        <script src="app/voodoo/voodooSorter.js"> </script>
+        <script src="app/voodoo/voodooDatePicker.js"> </script>
+        <script src="app/voodoo/serverError.js"> </script>
+        <script src="app/voodoo/ngReallyClick.js"> </script>
+        <script src="app/StringFactory.js"> </script>
+        <script src="app/SessionFactory.js"> </script>
+
+    </body>
+</html>
