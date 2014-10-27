@@ -7,7 +7,7 @@ using Voodoo;
 using Voodoo.Messages;
 using Voodoo.Operations;
 
-namespace StringReplicator.Core.Operations
+namespace StringReplicator.Core.Operations.Format
 {
     /// <summary>
     ///     This is a slightly modified version of the Format function in string.cs from the mono project.

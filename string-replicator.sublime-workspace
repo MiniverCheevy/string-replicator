@@ -3,10 +3,46 @@
 	{
 		"selected_items":
 		[
+			[
+				"de",
+				"debugger"
+			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "StringReplicator.Core/Web/index.html",
+			"settings":
+			{
+				"buffer_size": 3676,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "StringReplicator.Core/Web/app/string/controller.js",
+			"settings":
+			{
+				"buffer_size": 832,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Dropbox/Lib/Projects/voodoo.gh-pages/voodoo/index.html",
+			"settings":
+			{
+				"buffer_size": 140728,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Dropbox/Lib/Projects/voodoo/Voodoo/Voodoo.nuspec",
+			"settings":
+			{
+				"buffer_size": 979,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -76,8 +112,121 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "StringReplicator.Core/Web/index.html",
+					"settings":
+					{
+						"buffer_size": 3676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2783,
+								2783
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "StringReplicator.Core/Web/app/string/controller.js",
+					"settings":
+					{
+						"buffer_size": 832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								192,
+								192
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Dropbox/Lib/Projects/voodoo.gh-pages/voodoo/index.html",
+					"settings":
+					{
+						"buffer_size": 140728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								137485,
+								137485
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 52041.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/Dropbox/Lib/Projects/voodoo/Voodoo/Voodoo.nuspec",
+					"settings":
+					{
+						"buffer_size": 979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								845,
+								845
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

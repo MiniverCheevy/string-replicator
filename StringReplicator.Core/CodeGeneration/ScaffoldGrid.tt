@@ -6,7 +6,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ include file="$(ProjectDir)\CodeGeneration\CodeWalker.ttinclude" #>
 <#
-var properties = walker.GetProperties("RunAsWrapper.Core.Operations.Users.UserMessage");
+var properties = walker.GetProperties("StringReplicator.Core.Operations.FormatRequest");
 #>
 <div class="form-horizontal">
     <div class="col-md-11">

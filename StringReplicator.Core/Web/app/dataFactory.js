@@ -8,13 +8,13 @@
 (function () {
     angular
 	.module('app')
-	.factory('stringFactory', ['$http', function($http) {
+	.factory('dataFactory', ['$http', function($http) {
 
-    var urlBase = '/api/string';
-    var stringFactory = {};
+    var urlBase = '/api/data';
+    var dataFactory = {};
 
 		
-		stringFactory.get = function (request) {
+		dataFactory.get = function (request) {
         var operation= $http({method: 'GET', url: urlBase, params: request });
 		return operation.then(function(data, status, headers, config) {
             return data.data;
@@ -27,20 +27,6 @@
 
 		
 
-
-		stringFactory.post = function (request) {
-        var operation= $http({method: 'POST', url: urlBase, params: request });
-		return operation.then(function(data, status, headers, config) {
-            return data.data;
-        }, function(error) {
-		    console.log(error);
-            return  { isOk: false, message: error };
-        });
-		
-    };
-
-		
-
-	return stringFactory;
+	return dataFactory;
 }]);
 }())

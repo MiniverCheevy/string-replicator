@@ -98,16 +98,19 @@
     <Compile Include="CodeGeneration\CodeWalker.cs" />
     <Compile Include="CodeGeneration\Resources.cs" />
     <Compile Include="CodeGeneration\RestAttribute.cs" />
-    <Compile Include="Controllers\SessionController.cs">
+    <Compile Include="Controllers\DataController.cs">
       <DependentUpon>Controllers.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\StringController.cs">
       <DependentUpon>Controllers.tt</DependentUpon>
     </Compile>
-    <Compile Include="Operations\FormatQuery.cs" />
+    <Compile Include="Helpers\Config.cs" />
+    <Compile Include="Operations\Data\FormatRequestQuery.cs" />
+    <Compile Include="Operations\Format\FormatQuery.cs" />
     <Compile Include="Operations\FormatRequest.cs" />
-    <Compile Include="Operations\LineFormatingOperation.cs" />
-    <Compile Include="Operations\LineFormattingRequest.cs" />
+    <Compile Include="Operations\Format\LineFormatingOperation.cs" />
+    <Compile Include="Operations\Format\LineFormattingRequest.cs" />
+    <Compile Include="Operations\Format\ShutDownCommand.cs" />
     <Compile Include="Operations\Messages.cs" />
     <Compile Include="Operations\Processes\ShutdownCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,13 +163,12 @@
     <Content Include="license.txt" />
     <Content Include="Web\app\app.css" />
     <Content Include="Web\app\app.js" />
-    <Content Include="Web\app\config\controller.js" />
+    <Content Include="Web\app\dataFactory.js">
+      <DependentUpon>factories.tt</DependentUpon>
+    </Content>
     <Content Include="Web\app\factories.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>factories.tt</DependentUpon>
-    </Content>
-    <Content Include="Web\app\sessionFactory.js">
       <DependentUpon>factories.tt</DependentUpon>
     </Content>
     <Content Include="Web\app\stringFactory.js">

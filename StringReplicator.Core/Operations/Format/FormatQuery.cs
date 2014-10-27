@@ -10,7 +10,7 @@ using Voodoo;
 using Voodoo.Messages;
 using Voodoo.Operations;
 
-namespace StringReplicator.Core.Operations
+namespace StringReplicator.Core.Operations.Format
 {
     [Rest(Verb.Get, Resources.String)]
     public class FormatQuery : Command<FormatRequest, TextResponse>

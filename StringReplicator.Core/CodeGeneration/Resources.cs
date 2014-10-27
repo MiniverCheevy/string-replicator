@@ -8,5 +8,7 @@ namespace StringReplicator.Core.CodeGeneration
     {
         public const string String = "String";
         public const string Session = "Session";
+
+        public const string Data = "Data";
     }
 }

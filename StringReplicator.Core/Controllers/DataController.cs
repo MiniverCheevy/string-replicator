@@ -14,24 +14,14 @@ using System.Web.Http;
 using Voodoo;
 namespace StringReplicator.Core.Controllers
 {
-	public class StringController : ApiController
+	public class DataController : ApiController
 	{
 		
 		[HttpGet]
-		public Voodoo.Messages.TextResponse Get
-			([FromUri] StringReplicator.Core.Operations.FormatRequest request)
+		public Voodoo.Messages.Response<StringReplicator.Core.Operations.FormatRequest> Get
+			([FromUri] Voodoo.Messages.EmptyRequest request)
 			{
-				var op = new StringReplicator.Core.Operations.Format.FormatQuery(request);
-				var response = op.Execute();
-				return response;
-			}
-
-
-		[HttpPost]
-		public Voodoo.Messages.Response Post
-			([FromUri] StringReplicator.Core.Operations.FormatRequest request)
-			{
-				var op = new StringReplicator.Core.Operations.Format.ShutdownCommand(request);
+				var op = new StringReplicator.Core.Operations.Data.FormatRequestQuery(request);
 				var response = op.Execute();
 				return response;
 			}

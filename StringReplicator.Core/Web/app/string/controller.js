@@ -1,19 +1,33 @@
 ﻿(function() {
     "use strict";
     angular.module('app')
-        .controller("string", ['$scope', 'stringFactory',
-            function($scope, stringFactory) {
-
+        .controller("string", ['$scope', '$window', 'stringFactory', 'dataFactory',
+            function ($scope, $window, stringFactory, dataFactory) {
                 $scope.detail = {};
-                $scope.detail.dataString = 'a,b,c';
-                $scope.detail.formatString = '{0}--{1}';
+
+                $window.onbeforeunload =
+                   function () {
+                       debugger;
+                       stringFactory.post($scope.detail);
+                   };
+
+                dataFactory.get({}).then($scope.loadLastRequest);
+
+                $scope.loadLastRequest = function (response) {
+                    if (response.isOk) {
+                        $scope.detail.formatString = response.formatString;
+                        $scope.detail.dataString = response.dataString;
+                    } else {
+                        $scope.error = response.message;
+                    }
+                };
+                
+
                 $scope.format = function() {
-                    debugger;
                     stringFactory.get($scope.detail).then($scope.replaceOutput);
                 };
 
-                $scope.replaceOutput = function(response) {
-                    debugger;
+                $scope.replaceOutput = function(response) {                    
                     if (response.isOk) {
                         $scope.detail.output = response.text;
                     } else {
