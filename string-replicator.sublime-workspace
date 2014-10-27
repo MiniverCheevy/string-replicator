@@ -3,10 +3,6 @@
 	{
 		"selected_items":
 		[
-			[
-				"de",
-				"debugger"
-			]
 		]
 	},
 	"buffers":
@@ -15,31 +11,7 @@
 			"file": "StringReplicator.Core/Web/index.html",
 			"settings":
 			{
-				"buffer_size": 3676,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "StringReplicator.Core/Web/app/string/controller.js",
-			"settings":
-			{
-				"buffer_size": 832,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Dropbox/Lib/Projects/voodoo.gh-pages/voodoo/index.html",
-			"settings":
-			{
-				"buffer_size": 140728,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/Dropbox/Lib/Projects/voodoo/Voodoo/Voodoo.nuspec",
-			"settings":
-			{
-				"buffer_size": 979,
+				"buffer_size": 4214,
 				"line_ending": "Windows"
 			}
 		}
@@ -47,15 +19,27 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 81.0,
 		"selected_items":
 		[
+			[
+				"Package Contrinst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Contr",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
 		],
-		"width": 0.0
+		"width": 472.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 146.0
 	},
 	"distraction_free":
 	{
@@ -68,16 +52,118 @@
 	},
 	"file_history":
 	[
-		"/C/Dropbox/Lib/Projects/ra/.gitignore",
-		"/C/Dropbox/Lib/Projects/ra - Copy/Hosting/web/app/dialogs/dialog.html",
-		"/C/Dropbox/Lib/Projects/ra - Copy/Hosting/web/index.html",
-		"/C/Dropbox/Lib/Projects/ra - Copy/Hosting/web/app/apps/edit.html",
-		"/C/Dropbox/Lib/Projects/string-replicator/StringReplicator.Core/postBuild.bat",
-		"/C/Dropbox/Lib/Projects/ra - Copy/Hosting/web/app/apps/appsController.js",
-		"/C/Dropbox/Lib/Projects/ra - Copy/Hosting/web/app/dialogs/dialogs.js",
-		"/C/Dropbox/Lib/Projects/voodoo.gh-pages/voodoo/index.html",
-		"//tsclient/C/Users/hehew_000/Links/Vuze Downloads.lnk",
-		"/C/Dropbox/Lib/Projects/angular/tutorial/angular-phonecat/app/index.html"
+		"/C/DropBox/Lib/Projects/ra/Hosting/web/app/apps/grid.html",
+		"/C/DropBox/Lib/Projects/ra/Hosting/web/app/apps/controller.js",
+		"/C/DropBox/Lib/Projects/Voodoo/Voodoo/Voodoo.nuspec",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/config/controller.cs",
+		"/C/Users/Shawn/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/index.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/.git/.COMMIT_EDITMSG.swp",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/config/controller.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/users/controller.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/global/controller.cs",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/users/add.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/users/edit.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/users/grid.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/apps/controller.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/apps/grid.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/apps/fields.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/apps/add.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/apps/edit.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/app.css",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/users/usersController.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/apps/appsController.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/js/angular.min.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/karma.conf.forest.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/karma.conf.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/app.js",
+		"/C/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/Packages/schemas/html/commonHTML5Types.xsd",
+		"/C/DropBox/Shawn/VisualStudioStuff/angular-vs/commonHTML5Types.xsd",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/test/test-helper.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/spec/atestController.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/spec/jasmine.test.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/node_modules/jasmine/lib/examples/jasmine.json",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/test/karma-shared.conf.js",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/test/karma-unit.conf.js",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/Gruntfile.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/test/test.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/js/angular-animate.min.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/usersFactory.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/test/jasmine.test.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/spec/testController.js",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/bower.json",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/package.json",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/test/unit/services/servicesSpec.js",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/test/mocha.conf.js",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/app/scripts/controllers/controllers.js",
+		"/C/DropBox/Lib/Projects/angular-unit-testing/AngularJS-Testing-Article-master/AngularJS-Testing-Article-master/app/assets/app.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/test-main.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/node_modules/karma-cli/bin/karma",
+		"/C/DropBox/cmd/config.ra",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/voodoo/serverError.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/voodoo/voodooServerError",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/appsFactory.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/css/bootstrap-theme.css",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/css/bootstrap.min.css",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/test/unit/controllersSpec.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/package.json",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/bower.json",
+		"/C/Users/Shawn/Desktop/test.dtf",
+		"/C/Users/Shawn/Desktop/testSpoolStatus.dtf",
+		"/C/Users/Shawn/Desktop/TEST2.dtf",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/voodoo/ngReallyClick.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/voodoo/voodoo.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/voodoo/voodooDatePicker.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/voodoo/voodooConfirm.js",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/dialogs/dialog.html",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/dialogs/dialogs.css",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/dialogs/README.md",
+		"/E/Dev/CBI/E1 Engineering Interface/DEV/EngineeringInterface/EngineeringInterface.UI/Web.Dev.config",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/dialogs/dialogs.js",
+		"/C/DropBox/cmd/vs.bat",
+		"/C/DropBox/Lib/sql/used indexes.sql",
+		"//10.129.202.23/Shared/bom.sql",
+		"/E/Dev/CBI/VSS3/ShawExpress/Dev/ShawExpress.Service/JDE.E1.Sql/SHA_USERJOBQUERY.spsql",
+		"/E/Dev/CBI/VSS3/ShawExpress/Dev/ShawExpress.Service/JDE.E1.Sql/SHA_BOMQUERY.spsql",
+		"/E/Dev/CBI/VSS3/ShawExpress/Dev/ShawExpress.Service/JDE.E1.Sql/SHA_ISOQUERY.spsql",
+		"/E/Dev/CBI/VSS3/ShawExpress/Dev/ShawExpress.Service/JDE.E1.Sql/SHA_SPOOLQUERY.spsql",
+		"/E/Dev/CBI/VSS3/ShawExpress/Dev/ShawExpress.Service/JDE.E1.Sql/SHA_SPOOLSTATUSQUERY.spsql",
+		"/C/DropBox/Lib/Projects/ra - Copy/Hosting/web/app/voodoo/voodoo.css",
+		"//10.129.202.23/Shared/Spool Query.sql",
+		"//10.129.202.23/Shared/Iso.sql",
+		"/C/DropBox/Lib/Classes/MVC.UtilityFunctions.cs",
+		"/C/Users/Shawn/Desktop/aero.theme",
+		"/C/Windows/Resources/Themes/theme1.theme",
+		"/C/Windows/Resources/Themes/theme2.theme",
+		"/C/DropBox/cmd/ra.pdb",
+		"/C/DropBox/Shawn/Settings/registryhacks/Sublime.reg",
+		"/C/DropBox/Shawn/Settings/registryhacks/Start WebServier Here 4.0..reg",
+		"/C/DropBox/Lib/Projects/voodoo.gh-pages/voodoo/index.html",
+		"/E/Dev/CBI/CycleCountTemp/notes.txt",
+		"/E/Dev/CBI/CycleCountTemp/CBICRPDTA2.CYCLECOUNT_GETCOUNTDETAIL",
+		"/E/Dev/CBI/CycleCountTemp/CBICRPDTA.CYCLECOUNT_UPDATECOUNTS",
+		"/E/Dev/CBI/E1 Engineering Interface/DEV/EngineeringInterface/JDE.Sql/CBICRPDTA.SpoolExpressExtractSpools.sql",
+		"/E/Dev/CBI/E1 Engineering Interface/DEV/EngineeringInterface/JDE.Sql/CBICRPDTA.SpoolExpressInsertF55FB01",
+		"/E/Dev/CBI/E1 Engineering Interface/DEV/EngineeringInterface/JDE.Sql/CBICRPDTA.GetMaxF55FB01Id.sql",
+		"/E/Dev/CBI/E1 Engineering Interface/DEV/EngineeringInterface/JDE.Sql/CBICRPDTA.SpoolExpressInsertF55FB02",
+		"/E/Dev/CBI/Cycle Count/Source/Source/CycleCount_1_0_X/JDE.E1.Sql/TODATE.udfsql",
+		"/E/Dev/CBI/CycleCountTemp/CBICRPDTA.CYCLECOUNT_GetCompanies.txt",
+		"/E/Dev/CBI/CycleCountTemp/Db2SqlCommandTemplate",
+		"/E/Dev/CBI/E1 Engineering Interface/DEV/EngineeringInterface/JDE.Sql/CBICRPDTA.SpoolExpressInsertF55FB03",
+		"/C/DropBox/cmd/QuickClean.7z",
+		"/E/Dev/Oilfield/IADCmODULES/build.bat",
+		"/E/Minefield/IADCModules/libs/files.txt",
+		"/E/Dev/Oilfield/www/RigVision/application/controllers/login.php",
+		"/C/DropBox/Lib/old/Clients/turner/release-next/BenefitsNG/Views/ContentManagement/Grid.cshtml",
+		"/C/Users/Shawn/Desktop/external.bat",
+		"/E/Dev/Oilfield/www/RigVision/application/config/database.php",
+		"/C/Program Files (x86)/PHP/v5.3/php.ini",
+		"/E/Dev/Oilfield/www/RigVision/application/config/config.php",
+		"/E/Dev/Oilfield/www/OIUSARigWebService/Web.config",
+		"/E/Dev/Oilfield/Support_4.2/ModuleBuilder/Rdlc/rdlc.xsd",
+		"/C/Users/Shawn/Downloads/ReportDefinition.xml",
+		"/C/DropBox/Lib/Clients/turner/release-next/BenefitsNG.Core/_DevTools/RequestValidationMessagesAndUnitTests.tt",
+		"/E/Dev/Oilfield/www/database.php"
 	],
 	"find":
 	{
@@ -95,6 +181,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"indent",
+			"gridState",
+			"ng-app",
+			"canvas",
+			"name=\"translate\"",
+			"xsd:attribute name=\"translate\"",
+			"{0}",
+			"UATDTA",
+			"{0}",
+			"F4211",
+			"{0}",
+			"bom",
+			"name",
+			"CBICRPDTA22",
+			"CBICRPDTA",
+			"CBICRPDTA22",
+			"CBICRPDTA",
+			"%JDEPREFIX%",
+			"\\r",
+			".32",
+			"\"",
+			"{",
+			"}",
+			"{",
+			"\"",
+			"data",
+			"debug",
+			"hostname"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -102,6 +216,17 @@
 		"regex": false,
 		"replace_history":
 		[
+			"state",
+			"UATDTA",
+			"{0}",
+			"CBICRPDTA2",
+			"CBICRPDTA",
+			".173",
+			"\"\"",
+			"{{",
+			"}}",
+			"{{",
+			"\"\""
 		],
 		"reverse": false,
 		"show_context": true,
@@ -112,7 +237,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -120,109 +245,73 @@
 					"file": "StringReplicator.Core/Web/index.html",
 					"settings":
 					{
-						"buffer_size": 3676,
+						"buffer_size": 4214,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2783,
-								2783
+								1525,
+								1525
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 399.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "StringReplicator.Core/Web/app/string/controller.js",
-					"settings":
-					{
-						"buffer_size": 832,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"BracketHighlighterBusy": false,
+							"bh_regions":
 							[
-								192,
-								192
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/Dropbox/Lib/Projects/voodoo.gh-pages/voodoo/index.html",
-					"settings":
-					{
-						"buffer_size": 140728,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								137485,
-								137485
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 52041.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/Dropbox/Lib/Projects/voodoo/Voodoo/Voodoo.nuspec",
-					"settings":
-					{
-						"buffer_size": 979,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								845,
-								845
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 162.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -236,7 +325,7 @@
 	},
 	"input":
 	{
-		"height": 31.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -263,7 +352,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -286,6 +375,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 131.0,
 	"status_bar_visible": true
 }

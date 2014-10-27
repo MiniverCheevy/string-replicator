@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using CsvHelper;
 using CsvHelper.Configuration;
+using Newtonsoft.Json;
 using StringReplicator.Core.CodeGeneration;
+using StringReplicator.Core.Helpers;
 using Voodoo;
 using Voodoo.Messages;
 using Voodoo.Operations;
 
 namespace StringReplicator.Core.Operations.Format
 {
-    [Rest(Verb.Get, Resources.String)]
+    [Rest(Verb.Post, Resources.String)]
     public class FormatQuery : Command<FormatRequest, TextResponse>
     {
         private List<string[]> csvData;
@@ -24,10 +26,21 @@ namespace StringReplicator.Core.Operations.Format
 
         protected override TextResponse ProcessRequest()
         {
+            saveRequest();
             buildCsv();
             buildOutput();
             response.Text = output.ToString();
+
             return response;
+        }
+
+        private void saveRequest()
+        {
+            var path = Config.Current.CurrentFilePath();
+            var directory = Path.GetDirectoryName(path);
+            IoNic.MakeDir(directory);
+            var json = JsonConvert.SerializeObject(request);
+            IoNic.WriteFile(json, path);
         }
 
         private void buildCsv()
@@ -60,7 +73,7 @@ namespace StringReplicator.Core.Operations.Format
                     inputRow.Add(row[i].To<string>().Trim());
                 }
                 var helper =
-                    new LineFormatingOperation(new LineFormattingRequest
+                    new LineFormattingOperation(new LineFormattingRequest
                     {
                         FormatString = tempFormat,
                         Arguments = inputRow.ToArray()

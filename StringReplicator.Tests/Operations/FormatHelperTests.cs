@@ -15,7 +15,7 @@ namespace StringReplicator.Tests.Operations
         public void Format_TwoStrings_IsOk()
         {
             var request = new LineFormattingRequest {FormatString = "{0},{1}", Arguments = new object[] {"a", "b"}};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute();
             Assert.AreEqual("a,b", response.Text);
         }
@@ -26,7 +26,7 @@ namespace StringReplicator.Tests.Operations
             const string format = "{0:!},{1}";
             var data = new object[] {"RedBlue", "b"};
             var request = new LineFormattingRequest {FormatString = format, Arguments = data};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute().Text;
             Assert.AreEqual("Red Blue,b", response);
         }
@@ -37,7 +37,7 @@ namespace StringReplicator.Tests.Operations
             const string format = "{0:yyyy},{1}";
             var data = new object[] {"1/1/2010".To<DateTime>(), "b"};
             var request = new LineFormattingRequest {FormatString = format, Arguments = data};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute().Text;
             var standardResponse = string.Format(format, data);
             Assert.AreEqual("2010,b", standardResponse);
@@ -50,7 +50,7 @@ namespace StringReplicator.Tests.Operations
             const string format = "{0,12:N0},{1}";
             var data = new object[] {"1504277".To<int>(), "b"};
             var request = new LineFormattingRequest {FormatString = format, Arguments = data};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute().Text;
             var standardResponse = string.Format(format, data);
             Assert.AreEqual("   1,504,277,b", standardResponse);
@@ -63,7 +63,7 @@ namespace StringReplicator.Tests.Operations
             const string format = "{0, 12:N0},{1}";
             var data = new object[] {"1504277".To<int>(), "b"};
             var request = new LineFormattingRequest {FormatString = format, Arguments = data};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute().Text;
             var standardResponse = string.Format(format, data);
             Assert.AreEqual("   1,504,277,b", standardResponse);
@@ -76,7 +76,7 @@ namespace StringReplicator.Tests.Operations
             const string format = "{0,-12:N0},{1}";
             var data = new object[] {"1504277".To<int>(), "b"};
             var request = new LineFormattingRequest {FormatString = format, Arguments = data};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute().Text;
             var standardResponse = string.Format(format, data);
             Assert.AreEqual("1,504,277   ,b", standardResponse);
@@ -89,7 +89,7 @@ namespace StringReplicator.Tests.Operations
             const string format = "{0}{1}{2}";
             var data = new object[] {"a", "b"};
             var request = new LineFormattingRequest {FormatString = format, Arguments = data};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute().Text;
             Assert.AreEqual(response, Messages.WrongNumberOfArguments);
         }
@@ -100,7 +100,7 @@ namespace StringReplicator.Tests.Operations
             const string format = "public {0} {1} {get;set;";
             var data = new object[] {"a", "b"};
             var request = new LineFormattingRequest {FormatString = format, Arguments = data};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute().Text;
             Assert.AreEqual(response, Messages.FormatError);
         }
@@ -112,7 +112,7 @@ namespace StringReplicator.Tests.Operations
             const string format = "public {0} {1} get;set;}";
             var data = new object[] {"a", "b"};
             var request = new LineFormattingRequest {FormatString = format, Arguments = data};
-            var helper = new LineFormatingOperation(request);
+            var helper = new LineFormattingOperation(request);
             var response = helper.Execute().Text;
             Assert.AreEqual(response, Messages.FormatError);
         }

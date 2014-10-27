@@ -14,14 +14,14 @@ using System.Web.Http;
 using Voodoo;
 namespace StringReplicator.Core.Controllers
 {
-	public class StringController : ApiController
+	public class SessionController : ApiController
 	{
 		
-		[HttpPost]
-		public Voodoo.Messages.TextResponse Post
-			([FromUri] StringReplicator.Core.Operations.FormatRequest request)
+		[HttpDelete]
+		public Voodoo.Messages.Response Delete
+			([FromUri] Voodoo.Messages.EmptyRequest request)
 			{
-				var op = new StringReplicator.Core.Operations.Format.FormatQuery(request);
+				var op = new StringReplicator.Core.Operations.Processes.ShutdownCommand(request);
 				var response = op.Execute();
 				return response;
 			}

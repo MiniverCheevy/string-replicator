@@ -1,6 +1,0 @@
-C:\Dropbox\Lib\Projects\string-replicator\build-outputs\StringReplicator.exe.config
-C:\Dropbox\Lib\Projects\string-replicator\build-outputs\StringReplicator.exe
-C:\Dropbox\Lib\Projects\string-replicator\build-outputs\StringReplicator.pdb
-C:\Dropbox\Lib\Projects\string-replicator\StringReplicator\obj\Debug\StringReplicator.csprojResolveAssemblyReference.cache
-C:\Dropbox\Lib\Projects\string-replicator\StringReplicator\obj\Debug\StringReplicator.exe
-C:\Dropbox\Lib\Projects\string-replicator\StringReplicator\obj\Debug\StringReplicator.pdb

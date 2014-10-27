@@ -8,16 +8,27 @@ using System.Threading.Tasks;
 
 namespace StringReplicator.Core.Helpers
 {
-    public class Config
+    public class Config : IConfig
     {
-        public static string GetRootPath()
+        private static IConfig current = null;
+
+        public static IConfig Current {
+            get { return current ?? new Config(); }
+        }
+
+        public static void RegisterConfig(IConfig config)
+        {
+            current = config;
+        }
+
+        public virtual string GetRootPath()
         {
             return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
         }
 
-        public static string CurrentFilePath()
+        public string CurrentFilePath()
         {
-            return Path.Combine(Config.GetRootPath(), "Data", "current.json");
+            return Path.Combine(GetRootPath(), "Data", "current.json");
         }
     }
 }

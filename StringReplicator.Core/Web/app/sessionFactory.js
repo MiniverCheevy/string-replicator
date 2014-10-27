@@ -8,14 +8,14 @@
 (function () {
     angular
 	.module('app')
-	.factory('stringFactory', ['$http', function($http) {
+	.factory('sessionFactory', ['$http', function($http) {
 
-    var urlBase = '/api/string';
-    var stringFactory = {};
+    var urlBase = '/api/session';
+    var sessionFactory = {};
 
 		
-		stringFactory.post = function (request) {
-        var operation= $http({method: 'POST', url: urlBase, params: request });
+		sessionFactory.delete = function (request) {
+        var operation= $http({method: 'DELETE', url: urlBase, params: request });
 		return operation.then(function(data, status, headers, config) {
             return data.data;
         }, function(error) {
@@ -27,6 +27,6 @@
 
 		
 
-	return stringFactory;
+	return sessionFactory;
 }]);
 }())

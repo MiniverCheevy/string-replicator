@@ -22,7 +22,7 @@ namespace StringReplicator.Core.Operations.Data
 
         protected override Response<FormatRequest> ProcessRequest()
         {
-            var path = Config.CurrentFilePath();
+            var path = Config.Current.CurrentFilePath();
             if (File.Exists(path))
             {
                 var json = IoNic.ReadFile(path);
