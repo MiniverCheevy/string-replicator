@@ -7,7 +7,7 @@ using StringReplicator.Core.Helpers;
 using StringReplicator.Core.Operations;
 using StringReplicator.Core.Operations.Format;
 
-namespace StringReplicator.Tests.Operations
+namespace StringReplicator.Tests.Operations.String
 {
     [TestClass]
     public class FormatCommandTests
@@ -27,7 +27,7 @@ namespace StringReplicator.Tests.Operations
         }
         public FormatCommandTests()
         {
-            var config = new TestConfig(TestContext.DeploymentDirectory);
+            var config = new TestConfig(TestContext);
             Config.RegisterConfig(config);
         }
         
@@ -36,7 +36,7 @@ namespace StringReplicator.Tests.Operations
         {
             var csv = string.Format("{0}{1}{0}{1}", "1,2,3", Environment.NewLine);
             var request = new FormatRequest {FormatString = "{0}-{1}-{2}", DataString = csv};
-            var helper = new FormatQuery(request);
+            var helper = new FormatCommand(request);
             var response = helper.Execute();
             var expected = "1-2-3" + Environment.NewLine + "1-2-3" + Environment.NewLine;
             Assert.AreEqual(null, response.Message);
@@ -52,7 +52,7 @@ namespace StringReplicator.Tests.Operations
 
             var csv = string.Format("{1}{0}{2}{0}{3}", data);
             var request = new FormatRequest { FormatString = "Row# {#}:  {0} --> {1:yyyy} --> {2:!}", DataString = csv };
-            var helper = new FormatQuery(request);
+            var helper = new FormatCommand(request);
             var stopwatch = new Stopwatch();
             stopwatch.Start();
             var response = helper.Execute();

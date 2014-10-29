@@ -72,7 +72,7 @@ namespace StringReplicator.Core
             jsonSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             jsonSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-            app.UseWebApi(apiConfig);
+            app.UseWebApi(apiConfig);            
         }
     }
 }

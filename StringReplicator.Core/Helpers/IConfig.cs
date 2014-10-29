@@ -4,5 +4,6 @@
     {
         string GetRootPath();
         string CurrentFilePath();
+        string GetUdlPath();
     }
 }

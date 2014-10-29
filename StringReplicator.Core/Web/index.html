@@ -14,7 +14,6 @@
         <span ng-cloak class="ng-cloak text-danger">{{error}}</span>
         <span ng-cloak class="ng-cloak text-info">{{info}}</span>   
         <form name="form">
-
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">CSV Data</h3>
@@ -22,7 +21,7 @@
                 <div class="panel-body" >
                     <div class="row">                
                         <div class="col-md-8">
-                            <textarea class="form-control" rows="6"
+                            <textarea class="form-control" rows="5"
                                       name="dataString" id="dataString"
                                       placeholder="CSV Data"
                                       ng-model="detail.dataString"
@@ -35,9 +34,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-6"></div>
-                        <div class="col-md-4">
-                            <button class="btn-sm btn-default" ng-click="sortAndDisting()">Sorted Distinct List</button>
+                        <div class="col-md-5"></div>
+                        <div class="col-md-3">
+                            <button class="btn-sm btn-default" v-database dataString="detail.dataString" database="detail.database">Database</button>
+                            <button class="btn-sm btn-default" ng-click="clean()">Sorted Distinct List</button>
                         </div>
                         
                     </div>
@@ -63,7 +63,7 @@
                             {#} 0 based row number<br />
                             {+} 1 based row number<br />
                             <br />
-                            *be sure to double up the { and } characters in your format string <br />ex: public {0} {1} &#123;&#123; get; set; &#125;&#125;
+                            *double up the { and } characters in your format string <br />ex: public {0} {1} &#123;&#123; get; set; &#125;&#125;
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <div class="row">
                         
                         <div class="col-md-12">
-                            <textarea class="form-control" rows="8"
+                            <textarea class="form-control" rows="6"
                                       name="output" id="output"                          
                                       ng-model="detail.output"
                                 ></textarea>
@@ -94,25 +94,35 @@
                 </div>
             </div>
         </form>
-        <!--<div ng-controller="session"></div>-->
-
-
-        <!--<div ng-controller="config"></div>-->
         <script src="js/angular.min.js"> </script>
 
         <script src="js/ui-bootstrap-tpls-0.11.0.min.js"> </script>
         <script src="app/app.js"> </script>
-        <script src="app/string/controller.js"> </script>
-        <!--<script src="app/session/controller.js"> </script>-->
-        <script src="app/voodoo/voodoo.js"> </script>
-        <script src="app/voodoo/voodooPager.js"> </script>
-        <script src="app/voodoo/voodooSorter.js"> </script>
-        <script src="app/voodoo/voodooDatePicker.js"> </script>
-        <script src="app/voodoo/serverError.js"> </script>
-        <script src="app/voodoo/ngReallyClick.js"> </script>
-        <script src="app/StringFactory.js"> </script>
-        <script src="app/SessionFactory.js"> </script>
-        <script src="app/DataFactory.js"> </script>
+        
+        <!-- bundle will one day go here -->
+
+        <script src=".\app\cleanFactory.js"> </script>
+        <script src=".\app\databaseFactory.js"> </script>
+        <script src=".\app\historyFactory.js"> </script>
+        <script src=".\app\sessionFactory.js"> </script>
+        <script src=".\app\stringFactory.js"> </script>
+        <script src=".\app\testFactory.js"> </script>
+        <script src=".\app\session\controller.js"> </script>
+        <script src=".\app\string\controller.js"> </script>
+        <script src=".\app\voodoo\ngReallyClick.js"> </script>
+        <script src=".\app\voodoo\serverError.js"> </script>
+        <script src=".\app\voodoo\voodoo.js"> </script>
+        <script src=".\app\voodoo\voodooConfirm.js"> </script>
+        <script src=".\app\voodoo\voodooDatabase.js"> </script>
+        <script src=".\app\voodoo\voodooDatePicker.js"> </script>
+        <script src=".\app\voodoo\voodooPager.js"> </script>
+        <script src=".\app\voodoo\voodooServerError.js"> </script>
+        <script src=".\app\voodoo\voodooSorter.js"> </script>
+        <script src=".\app\voodoo\voodooUtility.js"> </script>
+
+
+
+
 
     </body>
 </html>

@@ -8,17 +8,18 @@
 (function () {
     angular
 	.module('app')
-	.factory('dataFactory', ['$http', function($http) {
+	.factory('cleanFactory', ['$http', function($http) {
 
-    var urlBase = '/api/data';
-    var dataFactory = {};
+    var urlBase = '/api/clean';
+    var cleanFactory = {};
 
 		
-		dataFactory.get = function (request) {
-        var operation= $http({method: 'GET', url: urlBase, params: request });
+		cleanFactory.post = function (request) {
+        var operation= $http({method: 'POST', url: urlBase, params: request });
 		return operation.then(function(data, status, headers, config) {
             return data.data;
         }, function(error) {
+		//TODO: find the injectable logger and use it
 		    console.log(error);
             return  { isOk: false, message: error };
         });
@@ -27,6 +28,6 @@
 
 		
 
-	return dataFactory;
+	return cleanFactory;
 }]);
 }())

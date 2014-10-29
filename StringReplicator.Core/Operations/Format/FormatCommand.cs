@@ -15,12 +15,12 @@ using Voodoo.Operations;
 namespace StringReplicator.Core.Operations.Format
 {
     [Rest(Verb.Post, Resources.String)]
-    public class FormatQuery : Command<FormatRequest, TextResponse>
+    public class FormatCommand : Command<FormatRequest, TextResponse>
     {
         private List<string[]> csvData;
         private StringBuilder output = new StringBuilder();
 
-        public FormatQuery(FormatRequest request) : base(request)
+        public FormatCommand(FormatRequest request) : base(request)
         {
         }
 
@@ -61,22 +61,19 @@ namespace StringReplicator.Core.Operations.Format
             var rowNumber = 0;
             foreach (var row in csvData)
             {
-                var inputRow = new List<object>();
-
                 var tempFormat = request.FormatString;
 
                 tempFormat = tempFormat.Replace("{#}", rowNumber.ToString());
                 tempFormat = tempFormat.Replace("{+}", (rowNumber + 1).ToString());
 
-                for (var i = 0; i < row.Length; i++)
-                {
-                    inputRow.Add(row[i].To<string>().Trim());
-                }
                 var helper =
                     new LineFormattingOperation(new LineFormattingRequest
                     {
                         FormatString = tempFormat,
-                        Arguments = inputRow.ToArray()
+                        Arguments = 
+                            row.Select(t => t.To<string>().Trim())
+                                .Cast<object>()
+                                .ToArray()
                     });
                 var formattingResponse = helper.Execute();
                 output.Append(formattingResponse.Text);

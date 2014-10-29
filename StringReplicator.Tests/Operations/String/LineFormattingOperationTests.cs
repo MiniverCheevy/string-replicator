@@ -6,7 +6,7 @@ using StringReplicator.Core.Operations;
 using StringReplicator.Core.Operations.Format;
 using Voodoo;
 
-namespace StringReplicator.Tests.Operations
+namespace StringReplicator.Tests.Operations.String
 {
     [TestClass]
     public class FormatHelperTests

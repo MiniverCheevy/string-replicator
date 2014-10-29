@@ -1,4 +1,5 @@
-﻿using StringReplicator.Core.Helpers;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringReplicator.Core.Helpers;
 
 namespace StringReplicator.Tests
 {
@@ -6,9 +7,13 @@ namespace StringReplicator.Tests
     {
         private string path;
 
-        public TestConfig(string path)
+        public TestConfig(TestContext testContext)
+
         {
-            this.path = path;
+            if (testContext != null)
+                this.path = testContext.DeploymentDirectory;
+            else
+                path = System.IO.Path.GetDirectoryName(this.GetType().Assembly.Location);
         }
         public override string GetRootPath()
         {

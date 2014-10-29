@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using Voodoo;
@@ -50,6 +51,35 @@ namespace StringReplicator.Core.CodeGeneration
                     {Verb.Put, new RestMethod {Attribute = "[HttpPut]", Name = "Put", Parameter = "[FromUri]"}},
                     {Verb.Delete, new RestMethod {Attribute = "[HttpDelete]", Name = "Delete", Parameter = "[FromUri]"}},
                 };
+            }
+        }
+
+        public string[] GetScriptFiles(string pathToWeb)
+        {
+            var files = new List<String>();
+            var rootFiles = Directory.GetFiles(pathToWeb).Where(c=>c.ToLower().EndsWith(".js"));
+            foreach (var file in rootFiles)
+            {
+                if (Path.GetFileName(file.ToLower()) != "app.js")
+                    files.Add(file);
+            }
+            foreach (var directory in Directory.GetDirectories(pathToWeb))
+            {
+                addFiles(ref files, directory);
+            }
+            return files.Select(c=> c.Replace(pathToWeb,@".\app")).ToArray();
+        }
+
+        private void addFiles(ref List<string> files, string directory)
+        {
+            
+            foreach (var dir in Directory.GetDirectories(directory))
+            {
+                addFiles(ref files, dir);
+            }
+            foreach (var file in Directory.GetFiles(directory).Where(c => c.ToLower().EndsWith(".js")))
+            {
+                files.Add(file);
             }
         }
 

@@ -30,5 +30,9 @@ namespace StringReplicator.Core.Helpers
         {
             return Path.Combine(GetRootPath(), "Data", "current.json");
         }
+        public string GetUdlPath()
+        {
+            return Path.Combine(GetRootPath(), "Data", "current.udl");
+        }
     }
 }

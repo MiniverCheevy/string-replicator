@@ -21,7 +21,7 @@ namespace StringReplicator.Core.Controllers
 		public Voodoo.Messages.TextResponse Post
 			([FromUri] StringReplicator.Core.Operations.FormatRequest request)
 			{
-				var op = new StringReplicator.Core.Operations.Format.FormatQuery(request);
+				var op = new StringReplicator.Core.Operations.Format.FormatCommand(request);
 				var response = op.Execute();
 				return response;
 			}

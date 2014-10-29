@@ -19,6 +19,7 @@
 		return operation.then(function(data, status, headers, config) {
             return data.data;
         }, function(error) {
+		//TODO: find the injectable logger and use it
 		    console.log(error);
             return  { isOk: false, message: error };
         });

@@ -12,5 +12,12 @@ namespace StringReplicator.Core.Operations
 
         [Required(ErrorMessage = "required")]
         public string FormatString { get; set; }
+
+        public DatabaseRequest Database { get; set; }
+
+        public FormatRequest()
+        {
+            Database = new DatabaseRequest();
+        }
     }
 }

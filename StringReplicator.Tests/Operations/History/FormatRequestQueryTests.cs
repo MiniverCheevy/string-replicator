@@ -1,18 +1,19 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections.Generic;
-using System.Linq;
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringReplicator.Core.Helpers;
-using StringReplicator.Core.Operations.Data;
+using StringReplicator.Core.Operations.History;
 using Voodoo.Messages;
 
-namespace StringReplicator.Tests.Operations.Data
+namespace StringReplicator.Tests.Operations.History
 {
     [TestClass()]
     public class FormatRequestQueryTests
     {
 
         private TestContext testContextInstance;
+       
         public TestContext TestContext
         {
             get
@@ -26,13 +27,13 @@ namespace StringReplicator.Tests.Operations.Data
         }
         public FormatRequestQueryTests()
         {
-            var config = new TestConfig(TestContext.DeploymentDirectory);
+            var config = new TestConfig(TestContext);
             Config.RegisterConfig(config);
         }
         [TestMethod()]
         public void FormatRequestQueryTest()
         {
-            var response = new FormatRequestQuery(new EmptyRequest()).Execute();
+            var response = new LastFormatRequestQuery(new EmptyRequest()).Execute();
             Assert.AreEqual(null, response.Message);
             Assert.AreEqual(true, response.IsOk);
             Assert.AreNotEqual(null, response.Data.DataString);

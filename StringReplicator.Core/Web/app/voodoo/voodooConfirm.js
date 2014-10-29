@@ -3,7 +3,7 @@
         .directive('ngReallyClick', ['$modal',
             function($modal) {
 
-                var ModalInstanceCtrl = function($scope, $modalInstance) {
+                var modalInstanceCtrl = function($scope, $modalInstance) {
                     $scope.ok = function() {
                         $modalInstance.close();
                     };
@@ -27,15 +27,15 @@
 
                             var modalInstance = $modal.open({
                                 template: modalHtml,
-                                controller: ModalInstanceCtrl
+                                controller: modalInstanceCtrl
                             });
 
                             modalInstance.result.then(function() {
-                                scope.ngReallyClick({ item: scope.item }); //raise an error : $digest already in progress
+                                scope.ngReallyClick({ item: scope.item });
                             }, function() {
                                 //Modal dismissed
                             });
-                            //*/
+                            
 
                         });
 
@@ -43,3 +43,4 @@
                 };
             }
         ]);
+}())

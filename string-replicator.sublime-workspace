@@ -3,6 +3,10 @@
 	{
 		"selected_items":
 		[
+			[
+				"sor",
+				"sortAndDistinctFactory"
+			]
 		]
 	},
 	"buffers":
@@ -11,7 +15,23 @@
 			"file": "StringReplicator.Core/Web/index.html",
 			"settings":
 			{
-				"buffer_size": 4214,
+				"buffer_size": 5769,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "StringReplicator.Core/Web/app/voodoo/voodooDatabase.js",
+			"settings":
+			{
+				"buffer_size": 2993,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "StringReplicator.Core/Web/app/string/controller.js",
+			"settings":
+			{
+				"buffer_size": 2450,
 				"line_ending": "Windows"
 			}
 		}
@@ -22,6 +42,10 @@
 		"height": 81.0,
 		"selected_items":
 		[
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
 			[
 				"Package Contrinst",
 				"Package Control: Install Package"
@@ -52,6 +76,8 @@
 	},
 	"file_history":
 	[
+		"/C/DropBox/Lib/Projects/string-replicator/StringReplicator.Core/Web/app/sortAndDistinctFactory.js",
+		"/C/DropBox/Lib/Projects/string-replicator/StringReplicator.Core/Web/app/string/controller.js",
 		"/C/DropBox/Lib/Projects/ra/Hosting/web/app/apps/grid.html",
 		"/C/DropBox/Lib/Projects/ra/Hosting/web/app/apps/controller.js",
 		"/C/DropBox/Lib/Projects/Voodoo/Voodoo/Voodoo.nuspec",
@@ -237,7 +263,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -245,15 +271,15 @@
 					"file": "StringReplicator.Core/Web/index.html",
 					"settings":
 					{
-						"buffer_size": 4214,
+						"buffer_size": 5769,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1525,
-								1525
+								2079,
+								2094
 							]
 						],
 						"settings":
@@ -311,7 +337,159 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 162.0,
+						"translation.y": 504.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "StringReplicator.Core/Web/app/voodoo/voodooDatabase.js",
+					"settings":
+					{
+						"buffer_size": 2993,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								472,
+								472
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "StringReplicator.Core/Web/app/string/controller.js",
+					"settings":
+					{
+						"buffer_size": 2450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								278
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -375,6 +553,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 131.0,
+	"side_bar_width": 213.0,
 	"status_bar_visible": true
 }

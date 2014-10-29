@@ -1,21 +1,87 @@
 ﻿<div class="form-group">
-    <label for="dataString" class="col-lg-2 control-label">Data String</label>
+    <label for="dataBaseType" class="col-lg-2 control-label">Data Base Type</label>
     <div class="col-lg-4">
         <input type="text" class="form-control" 
-               name="dataString" id="dataString" 
-			   placeholder="Data String"
-               ng-model="detail.dataString" 
+               name="dataBaseType" id="dataBaseType" 
+			   placeholder="Data Base Type"
+               ng-model="detail.dataBaseType" 
 			   server-error ="detail.errors"  maxlength='128' />
     </div>       
 </div>
 
 <div class="form-group">
-    <label for="formatString" class="col-lg-2 control-label">Format String</label>
+    <label for="connectionType" class="col-lg-2 control-label">Connection Type</label>
     <div class="col-lg-4">
         <input type="text" class="form-control" 
-               name="formatString" id="formatString" 
-			   placeholder="Format String"
-               ng-model="detail.formatString" 
+               name="connectionType" id="connectionType" 
+			   placeholder="Connection Type"
+               ng-model="detail.connectionType" 
+			   server-error ="detail.errors"  maxlength='128' />
+    </div>       
+</div>
+
+<div class="form-group">
+    <label for="serverName" class="col-lg-2 control-label">Server Name</label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="serverName" id="serverName" 
+			   placeholder="Server Name"
+               ng-model="detail.serverName" 
+			   server-error ="detail.errors"  maxlength='128' />
+    </div>       
+</div>
+
+<div class="form-group">
+    <label for="userName" class="col-lg-2 control-label">User Name</label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="userName" id="userName" 
+			   placeholder="User Name"
+               ng-model="detail.userName" 
+			   server-error ="detail.errors"  maxlength='128' />
+    </div>       
+</div>
+
+<div class="form-group">
+    <label for="password" class="col-lg-2 control-label">Password</label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="password" id="password" 
+			   placeholder="Password"
+               ng-model="detail.password" 
+			   server-error ="detail.errors"  maxlength='128' />
+    </div>       
+</div>
+
+<div class="form-group">
+    <label for="databaseName" class="col-lg-2 control-label">Database Name</label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="databaseName" id="databaseName" 
+			   placeholder="Database Name"
+               ng-model="detail.databaseName" 
+			   server-error ="detail.errors"  maxlength='128' />
+    </div>       
+</div>
+
+<div class="form-group">
+    <label for="udlFile" class="col-lg-2 control-label">Udl File</label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="udlFile" id="udlFile" 
+			   placeholder="Udl File"
+               ng-model="detail.udlFile" 
+			   server-error ="detail.errors"  maxlength='128' />
+    </div>       
+</div>
+
+<div class="form-group">
+    <label for="sql" class="col-lg-2 control-label">Sql</label>
+    <div class="col-lg-4">
+        <input type="text" class="form-control" 
+               name="sql" id="sql" 
+			   placeholder="Sql"
+               ng-model="detail.sql" 
 			   server-error ="detail.errors"  maxlength='128' />
     </div>       
 </div>

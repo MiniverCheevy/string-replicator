@@ -88,31 +88,29 @@ namespace StringReplicator.Core.Operations.Format
             if (argumentNumber >= args.Count)
                 throw new FormatException(Messages.WrongNumberOfArguments);
 
-            var arg = args[argumentNumber];
-            var str = arg.To<string>();
+            var argument = args[argumentNumber];
+            var @string = argument.To<string>();
             object obj = null;
-            if (attemptToCoerceStringToOtherType(str, out obj))
+            if (attemptToCoerceStringToOtherType(@string, out obj))
             {
                 var formattable = obj as IFormattable;
                 if (formattable != null)
-                    str = formattable.ToString(argFormat, culture);
+                    @string = formattable.ToString(argFormat, culture);
             }
 
-            var friendly = argFormat == "!";
-            if (friendly)
-                str = str.ToFriendlyString();
+            if (argFormat == "!")
+                @string = @string.ToFriendlyString();
 
-            var proper = argFormat == "^";
-            if (proper)
-                str = culture.TextInfo.ToTitleCase(str.ToLower());
+            if (argFormat == "^")
+                @string = culture.TextInfo.ToTitleCase(@string.ToLower());
 
-            if (width > str.Length)
+            if (width > @string.Length)
             {
-                paddAndAppend(width, str, leftAlign);
+                padAndAppend(width, @string, leftAlign);
             }
             else
             {
-                output.Append(str);
+                output.Append(@string);
             }
             return position;
         }
@@ -142,27 +140,27 @@ namespace StringReplicator.Core.Operations.Format
             return false;
         }
 
-        private void paddAndAppend(int width, string str, bool leftAlign)
+        private void padAndAppend(int width, string @string, bool leftAlign)
         {
-            const char padchar = ' ';
-            var padlen = width - str.Length;
+            const char padCharacter = ' ';
+            var padLength = width - @string.Length;
 
             if (leftAlign)
             {
-                output.Append(str);
-                output.Append(padchar, padlen);
+                output.Append(@string);
+                output.Append(padCharacter, padLength);
             }
             else
             {
-                output.Append(padchar, padlen);
-                output.Append(str);
+                output.Append(padCharacter, padLength);
+                output.Append(@string);
             }
         }
 
-        private void parseFormatSpecifier(string str, ref int position, out int argumentNumber, out int width,
+        private void parseFormatSpecifier(string @string, ref int position, out int argumentNumber, out int width,
             out bool leftAlign, out string format)
         {
-            var max = str.Length;
+            var max = @string.Length;
 
             // parses format specifier of form:
             //   N,[\ +[-]M][:F]}
@@ -170,25 +168,25 @@ namespace StringReplicator.Core.Operations.Format
             // where:
             // N = argument number (non-negative integer)
 
-            argumentNumber = parseDecimal(str, ref position);
+            argumentNumber = parseDecimal(@string, ref position);
             if (argumentNumber < 0)
                 throw new FormatException(Messages.FormatError);
 
-            if (position < max && str[position] == ',')
+            if (position < max && @string[position] == ',')
             {
                 // White space between ',' and number or sign.
                 ++position;
-                while (position < max && Char.IsWhiteSpace(str[position]))
+                while (position < max && Char.IsWhiteSpace(@string[position]))
                     ++position;
                 var start = position;
 
-                format = str.Substring(start, position - start);
+                format = @string.Substring(start, position - start);
 
-                leftAlign = (position < max && str[position] == '-');
+                leftAlign = (position < max && @string[position] == '-');
                 if (leftAlign)
                     ++position;
 
-                width = parseDecimal(str, ref position);
+                width = parseDecimal(@string, ref position);
                 if (width < 0)
                     throw new FormatException(Messages.FormatError);
             }
@@ -199,30 +197,30 @@ namespace StringReplicator.Core.Operations.Format
                 format = String.Empty;
             }
 
-            if (position < max && str[position] == ':')
+            if (position < max && @string[position] == ':')
             {
                 var start = ++position;
-                while (position < max && str[position] != '}')
+                while (position < max && @string[position] != '}')
                     ++position;
 
-                format += str.Substring(start, position - start);
+                format += @string.Substring(start, position - start);
             }
             else
                 format = null;
 
-            if ((position >= max) || str[position++] != '}')
+            if ((position >= max) || @string[position++] != '}')
                 throw new FormatException(Messages.FormatError);
         }
 
-        private int parseDecimal(string str, ref int position)
+        private int parseDecimal(string @string, ref int position)
         {
             var p = position;
             var number = 0;
-            var max = str.Length;
+            var max = @string.Length;
 
             while (p < max)
             {
-                var c = str[p];
+                var c = @string[p];
                 if (c < '0' || '9' < c)
                     break;
 

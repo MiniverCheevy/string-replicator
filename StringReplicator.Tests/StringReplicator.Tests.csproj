@@ -36,6 +36,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
     <Reference Include="Voodoo, Version=1.0.21.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Voodoo.Patterns.1.0.21.0\lib\net40\Voodoo.dll</HintPath>
@@ -54,18 +56,26 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Operations\BaseStringManipulationCommand.cs" />
-    <Compile Include="Operations\Data\FormatRequestQueryTests.cs" />
-    <Compile Include="Operations\FormatHelperTests.cs" />
-    <Compile Include="Operations\FormatCommandTests.cs" />
-    <Compile Include="Operations\TextRequest.cs" />
+    <Compile Include="Infrastructure\Providers\ProviderFactoryTests.cs" />
+    <Compile Include="Operations\Clean\SortAndDistinctCommandTests.cs" />
+    <Compile Include="Operations\Data\DataQueryTests.cs" />
+    <Compile Include="Operations\String\LineFormattingOperationTests.cs" />
+    <Compile Include="Operations\String\FormatCommandTests.cs" />
+    <Compile Include="Operations\History\FormatRequestQueryTests.cs" />
+    <Compile Include="Operations\Test\TestConnectionQueryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Data\current.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Path With Spaces\test.udl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\current.udl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -77,6 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Operations\SortAndDistinct\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

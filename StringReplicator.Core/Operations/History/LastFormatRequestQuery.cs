@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+using System;
 using Newtonsoft.Json;
 using StringReplicator.Core.CodeGeneration;
 using StringReplicator.Core.Helpers;
@@ -11,12 +9,12 @@ using Voodoo;
 using Voodoo.Messages;
 using Voodoo.Operations;
 
-namespace StringReplicator.Core.Operations.Data
+namespace StringReplicator.Core.Operations.History
 {
-    [Rest(Verb.Get, Resources.Data)]
-    public class FormatRequestQuery: Query<EmptyRequest, Response<FormatRequest>>
+    [Rest(Verb.Get, Resources.History)]
+    public class LastFormatRequestQuery: Query<EmptyRequest, Response<FormatRequest>>
     {
-        public FormatRequestQuery(EmptyRequest request) : base(request)
+        public LastFormatRequestQuery(EmptyRequest request) : base(request)
         {
         }
 
