@@ -10,6 +10,9 @@
         <link rel="icon" href="/favicon.ico" type="image/icon">
     </head>
     <body ng-controller="string">
+        <a href="https://github.com/MiniverCheevy/string-replicator" target="_blank" title="source code" class="github">
+            <img src="./css/github.png" ></img>
+        </a>
         <h2>String Replicator</h2>
         <span ng-cloak class="ng-cloak text-danger">{{error}}</span>
         <span ng-cloak class="ng-cloak text-info">{{info}}</span>   
@@ -37,9 +40,9 @@
                         <div class="col-md-5"></div>
                         <div class="col-md-3">
                             <button class="btn-sm btn-default" v-database 
-                            data="detail.dataString" 
-                            database="detail.database"
-                            >Database</button>
+                                    data="detail.dataString" 
+                                    database="detail.database"
+                                >Database</button>
                             <button class="btn-sm btn-default" ng-click="clean()">Sorted Distinct List</button>
                         </div>
                         

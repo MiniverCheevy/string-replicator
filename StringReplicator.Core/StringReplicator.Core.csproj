@@ -157,6 +157,7 @@
     <Content Include="Web\app\voodoo\voodooDatabase.tmpl.html" />
     <Content Include="Web\app\voodoo\voodooDatabase.js" />
     <Content Include="Web\app\voodoo\voodooUtility.js" />
+    <Content Include="Web\css\github.png" />
     <Content Include="Web\WillOneDayBeBundles.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
