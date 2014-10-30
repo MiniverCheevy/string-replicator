@@ -8,21 +8,26 @@
 (function () {
     angular
 	.module('app')
-	.factory('testFactory', ['$http', function($http) {
+	.factory('testFactory', ['$http','$log', function($http,$log) {
 
     var urlBase = '/api/test';
     var testFactory = {};
 
 		
 		testFactory.get = function (request) {
-        var operation= $http({method: 'GET', url: urlBase, params: request });
-		return operation.then(function(data, status, headers, config) {
-            return data.data;
-        }, function(error) {
-		//TODO: find the injectable logger and use it
-		    console.log(error);
-            return  { isOk: false, message: error };
-        });
+				var operation= $http({url: urlBase, method:'get', params:request });		
+		
+		     return operation.then(function(data, status, headers, config) {
+				return data.data;
+			}, 
+			function(data, status, headers, config) {		
+				$log.error(data);
+				$log.error(status);
+				$log.error(headers);
+				$log.error(config);		    
+				return  { isOk: false, message: data };
+			}
+		);
 		
     };
 

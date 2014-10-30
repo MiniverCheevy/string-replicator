@@ -26,6 +26,8 @@ namespace StringReplicator.Core.Operations.Data
             var newLine = Environment.NewLine;
             var builder = new StringBuilder();
             var provider = ProviderFactory.GetProvider(request);
+            response.NumberOfRowsEffected = 0;
+            
             using (var connection = provider.GetConnection())
             {
                 connection.Open();
@@ -48,6 +50,7 @@ namespace StringReplicator.Core.Operations.Data
                                 builder.Append(comma);
                         }
                         builder.Append(newLine);
+                        response.NumberOfRowsEffected += 1;
                     }
                 }            
             }

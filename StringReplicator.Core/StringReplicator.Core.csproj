@@ -113,7 +113,6 @@
     <Compile Include="Helpers\Config.cs" />
     <Compile Include="Helpers\IConfig.cs" />
     <Compile Include="Operations\BaseStringManipulationCommand.cs" />
-    <Compile Include="Operations\Database\CreateUdlFileCommand.cs" />
     <Compile Include="Infrastructure\ConnectionType.cs" />
     <Compile Include="Operations\DatabaseRequest.cs" />
     <Compile Include="Infrastructure\DataBaseType.cs" />
@@ -122,6 +121,7 @@
     <Compile Include="Infrastructure\Providers\NotSqlServerDbHelper.cs" />
     <Compile Include="Infrastructure\Providers\ProviderFactory.cs" />
     <Compile Include="Infrastructure\Providers\SqlServerDbHelper.cs" />
+    <Compile Include="Operations\Database\CreateUdlFileCommand.cs" />
     <Compile Include="Operations\Database\DataQuery.cs" />
     <Compile Include="Operations\Data\DataQuery.cs" />
     <Compile Include="Operations\Format\FormatCommand.cs" />
@@ -141,6 +141,11 @@
       <DependentUpon>factories.tt</DependentUpon>
     </Content>
     <Content Include="Web\app\databaseFactory.js">
+      <DependentUpon>factories.tt</DependentUpon>
+    </Content>
+    <Content Include="Web\app\factories.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>factories.tt</DependentUpon>
     </Content>
     <Content Include="Web\app\historyFactory.js">
@@ -210,11 +215,6 @@
     <Content Include="Web\app\app.css" />
     <Content Include="Web\app\app.js" />
     <Content Include="Web\app\session\controller.js" />
-    <Content Include="Web\app\factories.txt">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>factories.tt</DependentUpon>
-    </Content>
     <Content Include="Web\app\sessionFactory.js">
       <DependentUpon>factories.tt</DependentUpon>
     </Content>

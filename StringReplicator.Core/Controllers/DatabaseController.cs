@@ -19,9 +19,19 @@ namespace StringReplicator.Core.Controllers
 		
 		[HttpPut]
 		public Voodoo.Messages.Response Put
-			([FromUri] Voodoo.Messages.EmptyRequest request)
+			([FromBody] Voodoo.Messages.EmptyRequest request)
 			{
 				var op = new StringReplicator.Core.Operations.Database.CreateUdlFileCommand(request);
+				var response = op.Execute();
+				return response;
+			}
+
+
+		[HttpGet]
+		public Voodoo.Messages.TextResponse Get
+			([FromUri] StringReplicator.Core.Operations.DatabaseRequest request)
+			{
+				var op = new StringReplicator.Core.Operations.Database.DataQuery(request);
 				var response = op.Execute();
 				return response;
 			}

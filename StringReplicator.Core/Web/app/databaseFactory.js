@@ -8,21 +8,46 @@
 (function () {
     angular
 	.module('app')
-	.factory('databaseFactory', ['$http', function($http) {
+	.factory('databaseFactory', ['$http','$log', function($http,$log) {
 
     var urlBase = '/api/database';
     var databaseFactory = {};
 
 		
 		databaseFactory.put = function (request) {
-        var operation= $http({method: 'PUT', url: urlBase, params: request });
-		return operation.then(function(data, status, headers, config) {
-            return data.data;
-        }, function(error) {
-		//TODO: find the injectable logger and use it
-		    console.log(error);
-            return  { isOk: false, message: error };
-        });
+		        var operation= $http.put(urlBase,request );
+		
+		     return operation.then(function(data, status, headers, config) {
+				return data.data;
+			}, 
+			function(data, status, headers, config) {		
+				$log.error(data);
+				$log.error(status);
+				$log.error(headers);
+				$log.error(config);		    
+				return  { isOk: false, message: data };
+			}
+		);
+		
+    };
+
+		
+
+
+		databaseFactory.get = function (request) {
+				var operation= $http({url: urlBase, method:'get', params:request });		
+		
+		     return operation.then(function(data, status, headers, config) {
+				return data.data;
+			}, 
+			function(data, status, headers, config) {		
+				$log.error(data);
+				$log.error(status);
+				$log.error(headers);
+				$log.error(config);		    
+				return  { isOk: false, message: data };
+			}
+		);
 		
     };
 

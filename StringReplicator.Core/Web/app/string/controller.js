@@ -10,27 +10,27 @@
                 
                 self = this;
                 
-                this.loadLastRequest = function (response) {
+                $scope.loadLastRequest = function (response) {
                     if (util.isOk($scope,response))
                         $scope.detail = response.data;
                 };
                 
-                historyFactory.get({}).then(self.loadLastRequest);
+                historyFactory.get({}).then($scope.loadLastRequest);
 
                 $scope.format = function () {
-                    stringFactory.post($scope.detail).then(self.replaceOutput);
+                    stringFactory.post($scope.detail).then($scope.replaceOutput);
                 };
 
-                this.replaceOutput = function (response) {
+                $scope.replaceOutput = function (response) {
                     if (util.isOk($scope,response,$scope.form))
                         $scope.detail.output = response.text;
                 };
                 $scope.clean = function () {
                     var request = {};
                     request.text =  $scope.detail.dataString;
-                    cleanFactory.post(request).then(self.cleanDone);
+                    cleanFactory.post(request).then($scope.cleanDone);
                 };
-                this.cleanDone = function (response) {
+                $scope.cleanDone = function (response) {
                     if (util.isOk($scope,response))
                         $scope.detail.dataString = response.text;                    
                 };                

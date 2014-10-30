@@ -96,9 +96,19 @@
         </div>
         <div  ng-show="detail.dataBaseType=='notSqlServer'">
             <div class="row">
-                <span>NOT SQL</span>
+                 <div class="col-md-2"></div>
+                 <div class="col-md-8"><p>We're going to generate and invoke a <a href='http://msdn.microsoft.com/en-us/library/e38h511e.aspx' target='_blank'>udl</a> file.  It's kind of an old and crusty technology, but it will enumerate every bit of database connectivity on your system.  Click the invoke button to begin, then the read udl button when you're done.
+                 </p></div>
             </div>
-        </div>         
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <button ng-click="invoke()" class="btn btn-default">Invoke</button>
+                </div>
+                <div class="col-md-4">              
+                    <button ng-click="test()" class="btn btn-default">Read Udl</button>
+                </div>
+            </div>         
     </div>
  <div  ng-show="isTested">
         <div class="panel panel-default">
@@ -110,7 +120,7 @@
                         <div class="col-md-12">
                             <textarea class="form-control" rows="5"
                                       name="dataString" id="dataString"
-                                      placeholder="CSV Data"
+                                      placeholder="Raw Sql"
                                       ng-model="detail.sql"
                                       server-error="detail.errors"></textarea>
                             
@@ -133,7 +143,7 @@
             <div class="col-md-8"></div>
             <div class="col-md-4">
                 <button ng-click="cancel()" class="btn btn-primary">Cancel</button>
-                <button ng-click="close()" class="btn btn-default">Ok</button>
+                <button ng-click="ok()" ng-enabled="isComplete" class="btn btn-default">Ok</button>
             </div>
         </div>
     </div>

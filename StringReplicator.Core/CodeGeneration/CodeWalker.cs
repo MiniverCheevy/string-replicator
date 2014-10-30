@@ -47,8 +47,8 @@ namespace StringReplicator.Core.CodeGeneration
                 return new Dictionary<Verb, RestMethod>
                 {
                     {Verb.Get, new RestMethod {Attribute = "[HttpGet]", Name = "Get", Parameter = "[FromUri]"}},
-                    {Verb.Post, new RestMethod {Attribute = "[HttpPost]", Name = "Post", Parameter = "[FromUri]"}},
-                    {Verb.Put, new RestMethod {Attribute = "[HttpPut]", Name = "Put", Parameter = "[FromUri]"}},
+                    {Verb.Post, new RestMethod {Attribute = "[HttpPost]", Name = "Post", Parameter = "[FromBody]"}},
+                    {Verb.Put, new RestMethod {Attribute = "[HttpPut]", Name = "Put", Parameter = "[FromBody]"}},
                     {Verb.Delete, new RestMethod {Attribute = "[HttpDelete]", Name = "Delete", Parameter = "[FromUri]"}},
                 };
             }

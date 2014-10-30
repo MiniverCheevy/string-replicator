@@ -12,7 +12,8 @@
                 $scope.modalInstance = $modalInstance;
                 $scope.detail = $scope.$parent.database;
                 $scope.detail.dataBaseType = 'none';
-                    
+                $scope.isComplete=false;
+
                 self = this;
                 
                     $scope.ok = function () {
@@ -22,26 +23,35 @@
                     $scope.cancel = function () {
                         $scope.modalInstance.dismiss('cancel');
                     };
+                    $scope.invoke = function () {                        
+                        databaseFactory.put({}).then($scope.invokeDone);
+                    };
+                    $scope.invokeDone=function(response)
+                    {
+                        if (util.isOk($scope, response, $scope.form.details))
+                            $scope.database.udlFile = response.text;
+                    };
                     $scope.test = function () {
                         $scope.isTested=false;
-                        testFactory.get($scope.detail).then(self.testDone);
+                        testFactory.get($scope.detail).then($scope.testDone);
                     };
-                    this.testDone=function(response)
+                    $scope.testDone=function(response)
                     {
                         if (util.isOk($scope, response, $scope.form.details))
                             $scope.isTested=true;
                     };
                     $scope.query = function () {
-                        $scope.isTested=false;
-                        databaseFactory.get($scope.detail).then(self.queryDone);
+                        
+                        $scope.isComplete=false;
+                        databaseFactory.get($scope.detail).then($scope.queryDone);
                     };
-                    this.queryDone=function(response)
+                    $scope.queryDone=function(response)
                     {
                         if (util.isOk($scope, response, $scope.form.details))
                         {
-                            $scope.isTested=true;
+                            $scope.isComplete=true;
                             $scope.detail.result=response.text;
-                            $scope.info = 'Done. Click ok to update your csv data.';
+                            $scope.info = 'Done. '+ response.numberOfRowsEffected+' row(s) returned. Click ok to update your csv data.';
                         }
                     };                    
              }])
@@ -51,7 +61,7 @@
                     restrict: 'A',
                     scope: {
                         database: "=",
-                        dataString: "="
+                        data: "="
 
                     },           
                     link: function(scope, element, attrs) {
@@ -65,7 +75,7 @@
                             });
                             modalInstance.result.then(function(database) {
                                 scope.database = database;
-                                scope.dataString = database.result;                                
+                                scope.data = database.result;                                
                             }, function() {
                                 //Modal dismissed
                             });

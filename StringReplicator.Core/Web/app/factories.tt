@@ -12,7 +12,8 @@ foreach (var resource in walker.Resources)
 {
 var name = firstLetterLower(resource.Name);	
 	manager.StartNewFile(name + "Factory.js"); 
-	
+
+var bodyVerbs = new string[]{"post","put"};
 #>
 //***************************************************************
 //This code just called you a tool
@@ -24,7 +25,7 @@ var name = firstLetterLower(resource.Name);
 (function () {
     angular
 	.module('app')
-	.factory('<#=name #>Factory', ['$http', function($http) {
+	.factory('<#=name #>Factory', ['$http','$log', function($http,$log) {
 
     var urlBase = '/api/<#= name #>';
     var <#= name #>Factory = {};
@@ -32,14 +33,23 @@ var name = firstLetterLower(resource.Name);
 		<# foreach(var verb in resource.Verbs) {#>
 
 		<#= name #>Factory.<#=verb.Name.ToLower()#> = function (request) {
-        var operation= $http({method: '<#=verb.Name.ToUpper()#>', url: urlBase, params: request });
-		return operation.then(function(data, status, headers, config) {
-            return data.data;
-        }, function(error) {
-		//TODO: find the injectable logger and use it
-		    console.log(error);
-            return  { isOk: false, message: error };
-        });
+		<#if ( bodyVerbs.Contains(verb.Name.ToLower()) ) {#>
+        var operation= $http.<#=verb.Name.ToLower()#>(urlBase,request );
+		<#} else {#>
+		var operation= $http({url: urlBase, method:'<#=verb.Name.ToLower()#>', params:request });		
+		<#}#>
+
+		     return operation.then(function(data, status, headers, config) {
+				return data.data;
+			}, 
+			function(data, status, headers, config) {		
+				$log.error(data);
+				$log.error(status);
+				$log.error(headers);
+				$log.error(config);		    
+				return  { isOk: false, message: data };
+			}
+		);
 		
     };
 

@@ -19,7 +19,7 @@ namespace StringReplicator.Core.Controllers
 		
 		[HttpPost]
 		public Voodoo.Messages.TextResponse Post
-			([FromUri] StringReplicator.Core.Operations.TextRequest request)
+			([FromBody] StringReplicator.Core.Operations.TextRequest request)
 			{
 				var op = new StringReplicator.Core.Operations.Clean.SortAndDistinctCommand(request);
 				var response = op.Execute();
