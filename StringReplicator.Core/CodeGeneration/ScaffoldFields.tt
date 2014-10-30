@@ -6,7 +6,7 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ include file="$(ProjectDir)\CodeGeneration\CodeWalker.ttinclude" #>
 <#
-var properties = walker.GetProperties("StringReplicator.Core.Operations.DatabaseRequest");
+
 foreach(var property in properties)
 {
 #>

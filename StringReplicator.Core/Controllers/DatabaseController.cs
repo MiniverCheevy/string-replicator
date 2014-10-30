@@ -18,7 +18,7 @@ namespace StringReplicator.Core.Controllers
 	{
 		
 		[HttpPut]
-		public Voodoo.Messages.Response Put
+		public Voodoo.Messages.TextResponse Put
 			([FromBody] Voodoo.Messages.EmptyRequest request)
 			{
 				var op = new StringReplicator.Core.Operations.Database.CreateUdlFileCommand(request);

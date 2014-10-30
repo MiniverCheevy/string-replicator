@@ -8,4 +8,5 @@
 <#
 var manager = Manager.Create(Host, GenerationEnvironment);
 var walker = new StringReplicator.Core.CodeGeneration.CodeWalker();
+var properties = walker.GetProperties("StringReplicator.Core.Operations.DatabaseRequest");
 #>
