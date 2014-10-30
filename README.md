@@ -7,4 +7,7 @@ Simple templating tool to pass csv data through a template to generate text.  Ta
 {0:^} Proper Case<br/>
 {#} 0 based row number<br/>
 {+} 1 based row number<br/>
+<br/>
+<br/>
+<!-- choco install StringReplicator -Version 1.0.0.0 -->
 
