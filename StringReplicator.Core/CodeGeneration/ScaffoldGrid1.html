@@ -14,13 +14,49 @@
 			<tr>
                 <th class="">
                     <v-sorter
-                        text="Data String" member="dataString" 
+                        text="Data Base Type" member="dataBaseType" 
 						grid-state="state"
                         onsort="refresh()"></v-sorter>
                 </th>
                 <th class="">
                     <v-sorter
-                        text="Format String" member="formatString" 
+                        text="Connection Type" member="connectionType" 
+						grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+                <th class="">
+                    <v-sorter
+                        text="Server Name" member="serverName" 
+						grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+                <th class="">
+                    <v-sorter
+                        text="User Name" member="userName" 
+						grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+                <th class="">
+                    <v-sorter
+                        text="Password" member="password" 
+						grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+                <th class="">
+                    <v-sorter
+                        text="Database Name" member="databaseName" 
+						grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+                <th class="">
+                    <v-sorter
+                        text="Udl File" member="udlFile" 
+						grid-state="state"
+                        onsort="refresh()"></v-sorter>
+                </th>
+                <th class="">
+                    <v-sorter
+                        text="Sql" member="sql" 
 						grid-state="state"
                         onsort="refresh()"></v-sorter>
                 </th>
@@ -28,8 +64,14 @@
 		</tr>
 		</thead>
         <tr data-ng-repeat="item in data">
-            <td>{{item.dataString}}</td>
-            <td>{{item.formatString}}</td>
+            <td>{{item.dataBaseType}}</td>
+            <td>{{item.connectionType}}</td>
+            <td>{{item.serverName}}</td>
+            <td>{{item.userName}}</td>
+            <td>{{item.password}}</td>
+            <td>{{item.databaseName}}</td>
+            <td>{{item.udlFile}}</td>
+            <td>{{item.sql}}</td>
 
             <td>
 				<button ng-click="edit(item.key)" 

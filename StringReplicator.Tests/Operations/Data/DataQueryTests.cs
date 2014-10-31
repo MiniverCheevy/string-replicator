@@ -26,7 +26,7 @@ namespace StringReplicator.Tests.Operations.Data
             Assert.AreEqual(null, response.Message);
             Assert.AreEqual(true, response.IsOk);
             
-            const string expected = "\"Smith, John\",master,dbo";
+            //const string expected = "\"Smith, John\",master,dbo";
             //TODO: write extension method to compare strings
             //Debug.WriteLine(expected);
             //Debug.WriteLine(response.Text);

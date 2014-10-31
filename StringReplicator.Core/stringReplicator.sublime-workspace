@@ -70,6 +70,22 @@
 				"buffer_size": 5688,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "CodeGeneration/ScaffoldGrid.tt",
+			"settings":
+			{
+				"buffer_size": 1395,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/DropBox/Lib/Projects/ra/Hosting/CodeGeneration/ScaffoldGrid.tt",
+			"settings":
+			{
+				"buffer_size": 1394,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -112,6 +128,11 @@
 	},
 	"file_history":
 	[
+		"/C/DropBox/Lib/Projects/string-replicator/.git/index.lock",
+		"/C/DropBox/Lib/Projects/ra/Hosting/CodeGeneration/CodeWalker.ttinclude",
+		"/C/DropBox/Lib/Projects/ra/Hosting/CodeGeneration/ScaffoldFields.tt",
+		"/C/DropBox/Lib/Projects/string-replicator/StringReplicator.Core/CodeGeneration/CodeWalker.ttinclude",
+		"/C/DropBox/Lib/Projects/string-replicator/StringReplicator.Core/CodeGeneration/ScaffoldFields.tt",
 		"/C/DropBox/Lib/Projects/string-replicator/StringReplicator.Core/Web/app/voodoo/voodooDatabase.js",
 		"/C/DropBox/Lib/Projects/string-replicator/StringReplicator.Core/Web/app/voodoo/voodooDatabase.tmpl.html",
 		"/C/DropBox/Lib/Projects/string-replicator/StringReplicator.Core/Web/index.html",
@@ -234,12 +255,7 @@
 		"/E/Dev/CBI/E1 Engineering Interface/DEV/EngineeringInterface/JDE.Sql/CBICRPDTA.SpoolExpressInsertF55FB03",
 		"/C/DropBox/cmd/QuickClean.7z",
 		"/E/Dev/Oilfield/IADCmODULES/build.bat",
-		"/E/Minefield/IADCModules/libs/files.txt",
-		"/E/Dev/Oilfield/www/RigVision/application/controllers/login.php",
-		"/C/DropBox/Lib/old/Clients/turner/release-next/BenefitsNG/Views/ContentManagement/Grid.cshtml",
-		"/C/Users/Shawn/Desktop/external.bat",
-		"/E/Dev/Oilfield/www/RigVision/application/config/database.php",
-		"/C/Program Files (x86)/PHP/v5.3/php.ini"
+		"/E/Minefield/IADCModules/libs/files.txt"
 	],
 	"find":
 	{
@@ -328,7 +344,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -479,6 +495,158 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 656.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "CodeGeneration/ScaffoldGrid.tt",
+					"settings":
+					{
+						"buffer_size": 1395,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/DropBox/Lib/Projects/ra/Hosting/CodeGeneration/ScaffoldGrid.tt",
+					"settings":
+					{
+						"buffer_size": 1394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								334,
+								334
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
