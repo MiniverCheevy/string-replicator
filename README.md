@@ -9,5 +9,7 @@ Simple templating tool to pass csv data through a template to generate text.  Ta
 {+} 1 based row number<br/>
 <br/>
 <br/>
-<!-- choco install string-replicator -->
-
+Available on chocolaty:<br/>
+choco install string-replicator
+<br/> or from the 
+<a href='https://github.com/MiniverCheevy/string-replicator/raw/master/setup/Output/setup.exe'>Installer</a>
