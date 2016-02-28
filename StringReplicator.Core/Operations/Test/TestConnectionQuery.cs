@@ -8,12 +8,12 @@ using StringReplicator.Core.Infrastructure.Providers;
 using Voodoo.Infrastructure;
 using Voodoo.Messages;
 using Voodoo.Operations;
-using Message = Voodoo.Validation.Infrastructure.Messages;
 using Voodoo;
+using Verb = StringReplicator.Core.CodeGeneration.Verb;
 
 namespace StringReplicator.Core.Operations.Test
 {
-    [Rest(Verb.Get, Resources.Test)]
+    [CodeGeneration.Rest(Verb.Get, Resources.Test)]
     public class TestConnectionQuery : DatabaseQuery<Response>
     {
         public TestConnectionQuery(DatabaseRequest request) : base(request)

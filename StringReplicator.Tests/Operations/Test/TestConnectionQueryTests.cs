@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using StringReplicator.Core.Infrastructure;
 using StringReplicator.Core.Operations;
 using StringReplicator.Core.Operations.Test;
-using Message = Voodoo.Validation.Infrastructure.Messages;
 namespace StringReplicator.Tests.Operations.Test
 {
     [TestClass()]
@@ -35,7 +34,7 @@ namespace StringReplicator.Tests.Operations.Test
                 ConnectionType = ConnectionType.WindowsAuthentication
             };
             var response = new TestConnectionQuery(request).Execute();
-            Assert.AreEqual(Message.ValidationErrorsOccured, response.Message);
+            Assert.AreEqual(Voodoo.Strings.Validation.validationErrorsOccurred, response.Message);
             Assert.AreEqual(false, response.IsOk);
             Assert.AreEqual("DatabaseName",response.Details.First().Name);
             Assert.AreEqual("required", response.Details.First().Value);
@@ -50,7 +49,7 @@ namespace StringReplicator.Tests.Operations.Test
                 ConnectionType = ConnectionType.WindowsAuthentication
             };
             var response = new TestConnectionQuery(request).Execute();
-            Assert.AreEqual(Message.ValidationErrorsOccured, response.Message);
+            Assert.AreEqual(Voodoo.Strings.Validation.validationErrorsOccurred, response.Message);
             Assert.AreEqual(false, response.IsOk);
             Assert.AreEqual("ServerName", response.Details.First().Name);
             Assert.AreEqual("required", response.Details.First().Value);
@@ -67,7 +66,7 @@ namespace StringReplicator.Tests.Operations.Test
                 Password = "foo"
             };
             var response = new TestConnectionQuery(request).Execute();
-            Assert.AreEqual(Message.ValidationErrorsOccured, response.Message);
+            Assert.AreEqual(Voodoo.Strings.Validation.validationErrorsOccurred, response.Message);
             Assert.AreEqual(false, response.IsOk);
             Assert.AreEqual("UserName", response.Details.First().Name);
             Assert.AreEqual("required", response.Details.First().Value);
@@ -84,7 +83,7 @@ namespace StringReplicator.Tests.Operations.Test
                 UserName = "foo"
             };
             var response = new TestConnectionQuery(request).Execute();
-            Assert.AreEqual(Message.ValidationErrorsOccured, response.Message);
+            Assert.AreEqual(Voodoo.Strings.Validation.validationErrorsOccurred, response.Message);
             Assert.AreEqual(false, response.IsOk);
             Assert.AreEqual("Password", response.Details.First().Name);
             Assert.AreEqual("required", response.Details.First().Value);

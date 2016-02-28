@@ -25,11 +25,11 @@
                    ng-click="nextBlock()">...</a>
             </li>
             <li ng-class="{'disabled' : isLastPage }">
-                <a href="" ng-disabled="isLastBlock"
+                    <a href="" ng-disabled="isLastPage"
                    ng-click="lastPage()">&raquo</a>
             </li>
         </ul>
-        <p>{{RecordsVerbiage}}</p>
+                <p>{{recordsVerbiage}}</p>
     </div>
     <div id="norecords" ng-show="!hasRecords">
         <h3>No records found</h3>

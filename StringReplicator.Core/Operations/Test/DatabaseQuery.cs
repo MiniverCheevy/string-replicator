@@ -8,7 +8,6 @@ using StringReplicator.Core.Infrastructure.Providers;
 using Voodoo.Infrastructure;
 using Voodoo.Messages;
 using Voodoo.Operations;
-using Message = Voodoo.Validation.Infrastructure.Messages;
 using Voodoo;
 
 namespace StringReplicator.Core.Operations.Test
@@ -58,7 +57,7 @@ namespace StringReplicator.Core.Operations.Test
                     details.Add("Password", "required");
             }
             if (details.Any())
-                throw new LogicException(Voodoo.Validation.Infrastructure.Messages.ValidationErrorsOccured) {Details = details};
+                throw new LogicException(Voodoo.Strings.Validation.validationErrorsOccurred) {Details = details};
         }        
     }
 }

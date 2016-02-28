@@ -32,11 +32,15 @@
                 $scope.currentSort = $scope.gridState.sortDirection + $scope.gridState.sortMember;
             };
             $scope.isCurrentSortAsc = function(member) {
-                return $scope.gridState != null && $scope.gridState.sortMember.toUpperCase() == member.toUpperCase()
+                return $scope.gridState != null && $scope.gridState.sortMember != null &&
+                    $scope.gridState.sortDirection != null &&
+                     $scope.gridState.sortMember.toUpperCase() == member.toUpperCase()
                     && $scope.gridState.sortDirection.toUpperCase() == "ASC";
             };
             $scope.isCurrentSortDesc = function(member) {
-                return $scope.gridState != null && $scope.gridState.sortMember.toUpperCase() == member.toUpperCase()
+                return $scope.gridState != null && $scope.gridState.sortMember != null &&
+                    $scope.gridState.sortDirection != null &&
+                    $scope.gridState.sortMember.toUpperCase() == member.toUpperCase()
                     && $scope.gridState.sortDirection.toUpperCase() == "DESC";
             };
             $scope.sort = function(member) {

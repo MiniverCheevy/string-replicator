@@ -10,14 +10,12 @@ namespace StringReplicator.Core.Infrastructure.Providers
     {
         public static IDbHelper GetProvider(DatabaseRequest request)
         {
-            string connectionString;
             switch (request.DataBaseType)
             {
                 case DataBaseType.SqlServer:
                     return buildSqlServerProvider(request);
                 case DataBaseType.NotSqlServer:
                     return buildNotSqlServerProvider(request);
-                    break;
                 default:
                     throw new ArgumentOutOfRangeException("Unknown DataBaseType");
             }

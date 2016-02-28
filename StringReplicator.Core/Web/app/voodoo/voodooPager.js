@@ -63,11 +63,12 @@
                 $scope.isFirstBlock = min == 1;
                 $scope.isFirstPage = pageNumber == 1;
                 $scope.isLastPage = $scope.totalPages == pageNumber;
+                var startRow = ((pageNumber - 1) * $scope.gridState.pageSize) + 1;
+                var endRow = parseInt(startRow) + parseInt($scope.gridState.pageSize) -1
+                if ($scope.isLastPage)
+                    endRow = $scope.gridState.totalRecords;
 
-                if ($scope.totalPages != 1 && !$scope.isLastPage)
-                    $scope.recordsVerbiage = 'Showing ' + $scope.gridState.startRow + 1 + ' to ' + $scope.gridState.StartRow + $scope.gridState.pageSize + ' of ' + $scope.gridState.totalRecords;
-                else
-                    $scope.recordsVerbiage = 'Showing ' + $scope.gridState.startRow + 1 + ' to ' + $scope.gridState.StartRow + $scope.gridState.totalRecords + ' of ' + $scope.gridState.totalRecords;
+                $scope.recordsVerbiage = 'Showing ' + startRow + ' to ' + endRow + ' of ' + $scope.gridState.totalRecords;
 
 
             };
